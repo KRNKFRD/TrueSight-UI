@@ -23,6 +23,7 @@ I built this because I wanted my own character sheet to feel modern and calm, ba
 3. Use the extension popup to toggle the visual enhancements on or off at any time.
 4. ...
 5. Profit.
+X. For Firefox Developers: Rename manifest.firefox.json to manifest.json and delete the original one before loading the extension.
 
 // Community First:
 This is a passion project by me – KRNKFRD. I use it in my own campaigns and am happy to share it with the community. If you like it, let me know!
