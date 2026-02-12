@@ -5,6 +5,7 @@ TrueSight UI is a modern approach to D&D Beyond character sheets.
 It acts as a lightweight visual overhaul that redesigns, reorganizes, and resizes the interface to help you find information faster during sessions. I built this because I wanted my own character sheet to feel modern and calm, based on years of playing on D&D Beyond.
 
 // What it actually does:
+
 - Cleaner Layout: It reorganizes and resizes almost everything. Less scrolling, less visual noise.
 - Quick Links: I added a custom box where you can save character-specific bookmarks (like rules or VTTs) directly on the sheet.
 - Passive Senses: Moved them right into the skills list where they belong, to open up even more space.
@@ -14,10 +15,12 @@ Beyond 20 Support: I use Beyond 20 myself, so I tweaked its design to match my 
 
 
 // How it works:
+
 99% of the magic is created by 1,500 lines of handwritten CSS, and only where styles alone are not enough does TrueSight UI use JavaScript to achieve its goal (like syncing the sidebar, moving passive senses and for the Quick-Links-Box).
 
 
 // How to use:
+
 1. Install the extension and navigate to your D&D Beyond character sheet. 
 2. Set sheet appearance to [Underdark Mode]. 
 3. Use the extension popup to toggle the visual enhancements on or off at any time.
