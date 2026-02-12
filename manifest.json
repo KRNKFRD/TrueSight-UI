@@ -15,17 +15,16 @@
   },
   "permissions": [
     "activeTab",
-    "scripting",
     "storage"
   ],
   "host_permissions": [
-    "https://www.dndbeyond.com/*"
+    "https://www.dndbeyond.com/characters/*"
   ],
   "content_scripts": [
     {
       "matches": ["https://www.dndbeyond.com/characters/*"],
       "js": ["content/TrueSightUI-Bootstrap.js"],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "background": {
