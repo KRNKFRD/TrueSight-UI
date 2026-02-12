@@ -23,11 +23,10 @@
   },
   "permissions": [
     "activeTab",
-    "scripting",
     "storage"
   ],
   "host_permissions": [
-    "https://www.dndbeyond.com/*"
+    "https://www.dndbeyond.com/characters/*"
   ],
   "content_scripts": [
     {
