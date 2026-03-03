@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
   "name": "TrueSight UI for D&D Beyond",
-  "description": "Visual polish for D&D Beyond character sheets: modern layout, quicklinks tool and a custom cursor.",
-  "version": "1.0.0",
+  "description": "A visual overhaul for D&D Beyond character sheets with personal bookmarks and other QoL features.",
+  "version": "1.0.2",
   "icons": {
-    "16": "icons/TrueSightUI-icon-OFF-16.png",
-    "32": "icons/TrueSightUI-icon-OFF-32.png", 
-    "48": "icons/TrueSightUI-icon-OFF-48.png",
-    "128": "icons/TrueSightUI-icon-OFF-128.png"
+    "16": "icons/TrueSightUI-icon-ON-16.png",
+    "32": "icons/TrueSightUI-icon-ON-32.png", 
+    "48": "icons/TrueSightUI-icon-ON-48.png",
+    "128": "icons/TrueSightUI-icon-ON-128.png"
   },
   "action": {
     "default_title": "TrueSight UI",
@@ -34,9 +34,12 @@
     {
       "resources": [
         "content/styles.css",
+        "content/tsui-cursor.css",
+        "content/tsui-filters.css",
         "content/TrueSightUI-SitebarSync.js",
         "content/TrueSightUI-QuickLinks.js",
-        "content/TrueSightUI-PassiveSenses.js"
+        "content/TrueSightUI-PassiveSenses.js",
+        "content/TrueSightUI-GameLogScroll.js"
       ],
       "matches": ["https://www.dndbeyond.com/*"]
     }

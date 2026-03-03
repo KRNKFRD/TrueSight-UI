@@ -4,12 +4,10 @@
     const TARGET_SHEET = '.ct-character-sheet__inner';
     const MY_SIDEBAR = '.site-bar';
 
-    function initSync() {
-        const sheetInner = document.querySelector(TARGET_SHEET);
-        const mySidebar = document.querySelector(MY_SIDEBAR);
+    let currentSheetInner = null;
+    let currentObserver = null;
 
-        if (!sheetInner || !mySidebar) return;
-
+    function initSync(sheetInner) {
         const getTranslateX = (transformString) => {
             if (!transformString) return 0;
             const match = transformString.match(/translateX\s*\(\s*(-?\d+(\.\d+)?)px\s*\)/);
@@ -17,13 +15,15 @@
         };
 
         const syncPosition = () => {
+            const mySidebar = document.querySelector(MY_SIDEBAR);
+            if (!mySidebar) return;
+
             const currentTransform = sheetInner.style.transform;
             const xValue = getTranslateX(currentTransform);
 
             mySidebar.style.marginLeft = `${xValue}px`;
 
             if (sheetInner.style.transition) {
-
                 mySidebar.style.transition = sheetInner.style.transition.replace('transform', 'margin-left');
 
                 if (!mySidebar.style.transition) {
@@ -46,13 +46,37 @@
             attributes: true,
             attributeFilter: ['style']
         });
+
+        return observer;
     }
 
-    const waitForLoad = setInterval(() => {
-        if (document.querySelector(TARGET_SHEET)) {
-            clearInterval(waitForLoad);
-            setTimeout(initSync, 500);
+    setInterval(() => {
+        const sheetInner = document.querySelector(TARGET_SHEET);
+        const mySidebar = document.querySelector(MY_SIDEBAR);
+
+        if (!sheetInner) {
+            currentSheetInner = null; 
+            
+            if (currentObserver) {
+                currentObserver.disconnect(); 
+                currentObserver = null;
+            }
+
+            if (mySidebar) {
+                mySidebar.style.marginLeft = '';
+                mySidebar.style.transition = '';
+            }
+            return;
+        }
+
+        if (sheetInner !== currentSheetInner) {
+            if (currentObserver) {
+                currentObserver.disconnect();
+            }
+            currentSheetInner = sheetInner;
+            currentObserver = initSync(sheetInner);
         }
     }, 500);
+
 
 })();
