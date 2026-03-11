@@ -1,0 +1,79 @@
+.tsui-concentration-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 145%; 
+    height: 145%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+    animation: tsui-spin 60s linear infinite;
+}
+
+.tsui-concentrating .tsui-concentration-ring {
+    display: block;
+}
+
+.tsui-ring-background {
+    fill: none;
+    stroke: var(--theme-color);
+    stroke-width: 11; 
+    opacity: 1;
+}
+
+.tsui-concentration-ring text {
+    fill: #ffffff;
+    font-size: 8px; 
+    font-weight: 400;
+    font-family: "Google Sans Flex", sans-serif;
+    letter-spacing: 3.15px;
+    text-transform: uppercase;
+    dominant-baseline: central; 
+}
+
+.tsui-concentration-btn {
+    position: absolute;
+    bottom: -14px; 
+    right: -12px;
+    width: 15px;
+    height: 15px;
+    
+    transform: rotate(45deg);
+    background-color: var(--theme-color);
+    border-radius: 1px;
+    
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+    
+    transition: opacity 0.2s ease, filter 0.2s ease;
+    
+    opacity: 0.5;
+    filter: grayscale(100%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tsui-concentration-btn:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.tsui-concentration-btn span {
+    transform: rotate(-45deg);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 10px;
+    
+    transition: opacity 0.2s ease;
+    opacity: 1; 
+}
+
+@keyframes tsui-spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

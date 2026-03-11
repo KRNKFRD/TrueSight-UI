@@ -1,1560 +1,1694 @@
-    @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
-
-    @media screen and (min-width: 1200px) {
-
-      html * {
-        font-family: "Google Sans Flex", sans-serif !important;
-      }
-
-      .ddbc-character-tidbits__heading>h1,
-      .ct-skills__col--stat,
-      .styles_tabButton__wvSLf,
-      .ct-combat__summary-label,
-      .ct-proficiency-groups__group-items,
-      .ddbc-ability-summary__abbr,
-      [type="search"],
-      [type="text"] {
-        font-family: Majesty !important;
-        letter-spacing: 0.5px !important;
-      }
-
-      input {
-        font-family: "Google Sans Flex", sans-serif !important;
-      }
-
-
-      :root {
-        --TrueSight_Primary: hsla(213, 22%, 10%, .95) !important;
-        --TrueSight_Secondary: hsl(213 22% 19% / 1) !important;
-        --TrueSight_Tertiary: #244566 !important;
-      }
-
-
-      /* GENERAL TWEAKS */
-      .ct-character-sheet:before {
-        height: 0px !important;
-      }
-
-      .ct-subsection,
-      .ct-quick-info__abilities {
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-      }
-
-      div.ddbc-box-background>svg {
-        display: none !important;
-      }
-
-      html body#site {
-        background-position: center 0px !important;
-        background-size: cover !important;
-      }
-
-      .integrated-dice__container {
-        border: 0 !important;
-        border-radius: 4px !important;
-        background-color: var(--TrueSight_Secondary) !important;
-      }
-
-      .ct-subsection__footer {
-        display: none !important;
-      }
-
-      .ct-slot-manager__slot {
-        border-radius: 4px !important;
-      }
-
-      .ct-slot-manager__slot:before {
-        border-radius: 1px !important;
-      }
-
-      .ct-character-sheet {
-        border: 0 !important;
-        margin-top: 10px !important;
-      }
-
-
-      /* PRIMARY BOX TWEAKS */
-      .ct-inventory-item__meta-item,
-      span.ct-spells-spell__meta-item,
-      span.ddbc-combat-attack__meta-item,
-      .ddbc-attunement-slot__meta,
-      .ct-attunement__meta {
-        display: none !important;
-      }
-
-      .styles_buttons__hGhtB>button {
-        text-transform: unset !important;
-        font-weight: 500 !important;
-      }
-
-      button[data-testid="FEATURES_TRAITS"] {
-        font-size: 0 !important;
-      }
-
-      button[data-testid="FEATURES_TRAITS"]::after {
-        content: "Features" !important;
-        font-size: 14px !important;
-      }
-
-      .ddbc-note-components {
-        font-size: 9px !important;
-        line-height: 1.1 !important;
-      }
-
-      .ct-inventory-item {
-        line-height: 1.1 !important;
-        padding: 5px 0 !important;
-      }
-
-      .ct-character-sheet-desktop .ct-subsection--primary-box {
-        top: -105px !important;
-        bottom: unset !important;
-        height: 875px !important;
-        z-index: 300 !important;
-      }
-
-
-      .ct-primary-box {
-        height: 100% !important;
-      }
-
-      .ct-primary-box .ct-actions,
-      .ct-primary-box .ct-creatures,
-      .ct-primary-box .ct-description,
-      .ct-primary-box .ct-equipment,
-      .ct-primary-box .ct-extras,
-      .ct-primary-box .ct-features,
-      .ct-primary-box .ct-notes,
-      .ct-primary-box .ct-spells,
-      .styles_tabList__eedTo>menu+div {
-        height: 100% !important;
-      }
-
-      .ct-content-group {
-        margin-top: 10px !important;
-      }
-
-      .styles_content__QjnYw>div:nth-child(2) {
-        margin-top: 0px !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--cost {
-        font-size: 0 !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--cost::after {
-        content: "COST" !important;
-        font-size: 11px !important;
-      }
-
-
-      .styles_tableHeader__Ow6Oy>div:nth-child(2),
-      .ddbc-combat-attack__name {
-        flex: 2 1 0 !important;
-      }
-
-      .styles_tableHeader__Ow6Oy>div:nth-child(5),
-      .ddbc-combat-attack__damage {
-        min-width: 90px !important;
-      }
-
-
-      .ddbc-combat-item-attack__damage button,
-      .ddbc-spell-damage-effect__damages button,
-      .ddbc-spell-damage-effect__healing button,
-      .ddbc-combat-attack__damage button {
-        padding-left: 10px !important;
-        max-width: 100px !important;
-      }
-
-
-      .styles_tabList__Q4CqK>menu {
-        margin: 0 0 1rem !important;
-        height: 25px !important;
-        vertical-align: top !important;
-        align-items: flex-end !important;
-      }
-
-      button.styles_tabButton__wvSLf {
-        gap: 0 !important;
-        display: inline-grid !important;
-      }
-
-
-
-
-      /* EXTRA INVENTORY TWEAKS */
-      .ct-inventory-item__weight,
-      .ct-inventory-item__quantity,
-      .ct-inventory-item__cost,
-      .ct-inventory__col--weight,
-      .ct-inventory__col--qty,
-      .ct-inventory__col--cost {
-        text-align: center !important;
-      }
-
-      .ct-equipment__container-weight {
-        padding-left: 8px !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--active {
-        font-size: 0 !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--active:after {
-        content: "ACT." !important;
-        font-size: 11px !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--weight {
-        font-size: 0 !important;
-      }
-
-      .ct-inventory__col.ct-inventory__col--weight:after {
-        content: "WGT" !important;
-        font-size: 11px !important;
-      }
-
-
-      button[data-testid="my-inventory"],
-      button[data-testid="party-inventory"] {
-        font-size: 0 !important;
-        width: 30px !important;
-        height: 30px !important;
-        background-color: var(--theme-color) !important;
-
-        -webkit-mask-repeat: no-repeat !important;
-        -webkit-mask-position: center !important;
-        -webkit-mask-size: 25px !important;
-        mask-repeat: no-repeat !important;
-        mask-position: center !important;
-        mask-size: 25px !important;
-      }
-
-
-      button[data-testid="my-inventory"] {
-        -webkit-mask-image: url('https://api.iconify.design/game-icons:swordman.svg') !important;
-        mask-image: url('https://api.iconify.design/game-icons:swordman.svg') !important;
-      }
-
-      button[data-testid="party-inventory"] {
-        -webkit-mask-image: url('https://api.iconify.design/game-icons:mimic-chest.svg') !important;
-        mask-image: url('https://api.iconify.design/game-icons:mimic-chest.svg') !important;
-      }
-
-
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button {
-        background-color: rgba(255, 255, 255, .25) !important;
-        border-radius: 8px !important;
-      }
-
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button[aria-checked=true] {
-        background-color: var(--theme-color) !important;
-      }
-
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button[aria-checked=false]:hover {
-        background-color: rgba(255, 255, 255, .5) !important;
-      }
-
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li {
-        background-color: var(--TrueSight_Secondary) !important;
-        height: 34px !important;
-        width: 34px !important;
-        border-radius: 4px !important;
-      }
-
-
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu {
-        display: flex !important;
-        gap: 10px !important;
-        justify-content: center !important;
-        left: 0px !important;
-        height: 0px !important;
-        top: 5px !important;
-        z-index: 100
-      }
-
-      button.styles_overviewPrimaryButton__j84A5 {
-        max-width: 40% !important;
-      }
-
-
-      .styles_fullwidth__tseG2 .styles_tabs__aTttL:after {
-        display: none !important;
-      }
-
-
-      /* EXTRA SPELLS TWEAKS */
-      .ct-spells-filter__box,
-      .ct-spells-filter__advanced {
-        display: none !important;
-      }
-
-      .ct-spells-filter__interactions {
-        flex-direction: row-reverse !important;
-        height: 0px !important;
-        margin: 0px !important;
-      }
-
-      .ct-spells-filter__callout {
-        position: absolute !important;
-        top: 35px !important;
-        right: 0px !important;
-      }
-
-      .ct-spells-level-casting {
-        border: 0 !important;
-        margin-bottom: 0 !important;
-        padding-top: 5px !important;
-      }
-
-      .character-button-block-small {
-        padding: 5px 0 !important;
-      }
-
-
-
-      /* NAVI TWEAKS */
-      .site-bar__logo,
-      .socials,
-      .user-interactions,
-      .site-search__icon,
-      .user-details__name {
-        display: none !important;
-      }
-
-      .user-details__avatar {
-        width: 50px !important;
-        height: 50px !important;
-        border-radius: 8px !important;
-      }
-
-      img.user-details__avatar {
-        width: 40px !important;
-        height: 40px !important;
-        margin-left: 5px !important;
-      }
-
-      .user-details {
-        padding: 0px !important;
-        border: none !important;
-      }
-
-      input.react-autosuggest__input {
-        margin: 0 !important;
-        padding: 2px !important;
-      }
-
-      .site-bar,
-      .site-bar__container {
-        height: 50px !important;
-      }
-
-      .site-bar__container {
-        flex-direction: row-reverse !important;
-        background: var(--TrueSight_Primary) !important;
-        padding-bottom: 1px !important;
-        border-radius: 8px !important;
-        margin-top: 10px !important;
-      }
-
-      .site-search__form,
-      .site-search {
-        width: 350px !important;
-      }
-
-      .site-search .react-autosuggest__input:focus {
-        box-shadow: none !important;
-      }
-
-      .react-autosuggest__suggestions-list {
-        border-radius: 8px !important;
-        font-weight: 500 !important;
-      }
-
-      div#react-autowhatever-1 {
-        left: -5px !important;
-      }
-
-      ul.react-autosuggest__suggestions-list>li {
-        height: 30px !important;
-        background: none !important;
-      }
-
-      .react-autosuggest__suggestions-list>li:last-child {
-        margin-bottom: 10px !important;
-      }
-
-
-      .react-autosuggest__suggestion--highlighted {
-        background: none !important;
-        color: var(--theme-color) !important;
-      }
-
-
-      .site-bar {
-        border: 0 !important;
-        background: 0 !important;
-        position: relative
-      }
-
-
-
-
-      .header-wrapper.header-wrapper--characters {
-        z-index: 100 !important;
-        width: 420px !important;
-        left: 220px !important;
-        display: contents !important;
-      }
-
-      .user-details__menu {
-        top: 45px !important;
-        left: -1px !important;
-        z-index: 400 !important;
-        border-radius: 8px !important;
-        width: 135px !important;
-      }
-
-      .user-details__menu-item {
-        padding: 8px 12px !important;
-      }
-
-
-      .user-details__menu-item:hover {
-        background-color: unset !important;
-        color: var(--theme-color) !important;
-      }
-
-      .user-details__menu-item:hover>.user-details__link {
-        color: var(--theme-color) !important;
-      }
-
-      .user-details__link:hover {
-        color: var(--theme-color) !important;
-      }
-
-      .user-details__menu-item:hover>form>button {
-        color: var(--theme-color) !important;
-      }
-
-      div.user-details>ul.user-details__menu>li.user-details__menu-item:first-child {
-        border-top: 0 !important;
-      }
-
-
-
-      .site-search__form {
-        padding: 0 !important;
-      }
-
-      ._megaMenu_dbufq_1._MegaMenu_msb6l_1 {
-        display: none !important;
-      }
-
-
-      .ct-character-header-desktop {
-        padding: 15px 5px 40px !important;
-        font-weight: 500 !important;
-        font-size: 14px !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-      }
-
-      .ct-character-header-desktop__group.ct-character-header-desktop__group-tidbits {
-        position: absolute !important;
-      }
-
-
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--short-rest,
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--long-rest,
-      .styles_container__9OvpY,
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20 {
-        position: relative !important;
-        right: -430px !important;
-        top: -81px !important;
-        z-index: 2000 !important;
-        padding: 11px !important;
-      }
-
-
-      .ct-character-header-desktop {
-        z-index: 3000 !important;
-        width: 315px !important;
-      }
-
-
-
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20-hotkeys {
-        position: relative !important;
-        left: 30px !important;
-        top: -87px !important;
-        z-index: 200 !important;
-      }
-
-
-      .styles_campaignSummary__eY5SU,
-      .ct-character-header-desktop__button {
-        border-radius: 50px !important;
-        border: none !important;
-      }
-
-      .styles_campaignButtonGroup__f3klc {
-        border-radius: 50px !important;
-        border: none !important;
-      }
-
-      .styles_campaignButtonGroup__f3klc:hover,
-      .styles_campaignSummary__eY5SU:hover,
-      .ct-character-header-desktop__button:hover {
-        background-color: var(--TrueSight_Tertiary) !important;
-      }
-
-
-
-
-      /* HEADING TWEAKS */
-      .ddbc-character-tidbits__menu-callout,
-      .ct-character-header-desktop__group--share,
-      .ct-beyond20-settings,
-      .ct-character-header-desktop__button-icon,
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--builder,
-      .styles_summaryName__wOtsW,
-      #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-character-header-desktop>div.styles_container__9OvpY>span {
-        display: none !important;
-      }
-
-      .styles_container__9OvpY {
-        width: auto !important;
-        gap: 40px !important;
-      }
-
-      .styles_summaryLabel__xq6fg {
-        font-size: 0 !important;
-        display: contents !important;
-      }
-
-      .styles_summaryLabel__xq6fg:after {
-        font-size: 14px !important;
-        content: "Campaign" !important;
-        visibility: visible !important;
-        margin-left: 5px !important;
-        padding: 0 5px 0 1px !important;
-      }
-
-      .ct-character-header-desktop__button {
-        padding: 5px 12px 5px 8px !important;
-      }
-
-
-      svg.styles_campaignButtonIcon__0f687 {
-        display: none !important;
-      }
-
-      .styles_campaignButton__UQvTD:after {
-        font-size: 14px !important;
-        content: "Game Log" !important;
-        display: contents !important;
-      }
-
-      .styles_campaignButtonGroup__f3klc {
-        width: 100% !important;
-      }
-
-      .ddbc-character-tidbits__body,
-      .ddbc-character-summary {
-        color: white !important;
-        font-weight: 300 !important;
-      }
-
-
-
-
-
-
-
-      /* ADDITIONAL HEADING TWEAKS*/
-      .ct-quick-info {
-        z-index: 200 !important;
-      }
-
-      .ct-combat__summary-group--initiative {
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-        height: 90px !important;
-        width: 90px !important;
-        right: 710px !important;
-      }
-
-      .ct-combat__summary-group--initiative>section>div.styles_advantage__wjAyd>span>span>svg {
-        position: relative !important;
-        top: -75px !important;
-        right: 5px !important;
-      }
-
-      .ct-combat__summary-group--ac {
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-        right: 610px !important;
-        height: 90px !important;
-        width: 90px !important;
-      }
-
-      .ct-quick-info__box--proficiency {
-        position: absolute !important;
-        top: -100px !important;
-        right: 510px !important;
-        height: 90px !important;
-        width: 90px !important;
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-      }
-
-      .ct-quick-info__box--speed {
-        position: absolute !important;
-        top: -100px !important;
-        right: 410px !important;
-        height: 90px !important;
-        width: 90px !important;
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-      }
-
-      .ct-speed-box__label,
-      .ct-proficiency-bonus-box__label {
-        text-transform: none !important;
-        text-shadow: none !important;
-        color: #a2acb2 !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        line-height: 14px !important;
-        bottom: 8px !important;
-      }
-
-      .ddbc-armor-class-box__label {
-        text-transform: none !important;
-        text-shadow: none !important;
-        color: #a2acb2 !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        line-height: 14px !important;
-        bottom: -9.75px !important;
-      }
-
-      .ddbc-armor-class-box {
-        top: -4.5px !important;
-        font-weight: 500 !important;
-      }
-
-      .ddbc-armor-class-box__value {
-        letter-spacing: 1px !important;
-        font-size: 28px !important;
-        top: 0.25px !important;
-      }
-
-      .ct-speed-box__box-value>span>span:nth-child(1) {
-        font-size: 28px !important;
-        position: relative !important;
-        left: 2px !important;
-        top: 10px !important;
-        font-weight: 500 !important;
-      }
-
-      .ct-proficiency-bonus-box__value>span {
-        font-size: 28px !important;
-        position: relative !important;
-        right: 3.5px !important;
-        top: 10px !important;
-        font-weight: 500 !important;
-      }
-
-      .ct-speed-box__box-value>span>span:nth-child(1):after {
-        content: "\200A ft." !important;
-        font-size: 14px !important;
-        font-weight: 300 !important;
-      }
-
-      .ct-speed-box__heading {
-        position: relative !important;
-        bottom: 0 !important;
-        top: 52px !important;
-        padding: 0 !important;
-        font-size: 12px !important;
-        text-transform: none !important;
-        font-weight: 500 !important;
-      }
-
-      .ct-speed-box__box-value {
-        position: relative !important;
-        top: -17px !important;
-      }
-
-      .ct-proficiency-bonus-box__label:before {
-        content: "Proficiency\A" !important;
-        white-space: pre !important;
-      }
-
-      .ddbc-armor-class-box__label:before {
-        content: "Armor\A" !important;
-        white-space: pre !important;
-      }
-
-      .ct-proficiency-bonus-box__heading,
-      span.styles_label__L8mZK.styles_largeLabel__E3v8Y.styles_labelSignColor__Klmbs,
-      .ct-combat__summary-group--ac>section>div:nth-child(3) {
-        display: none !important;
-      }
-
-      section.styles_box__PLQui {
-        display: flex !important;
-        flex-direction: column-reverse !important;
-      }
-
-      .ct-combat__summary-group--initiative>section>div.styles_value__hqDak>button {
-        height: 33px !important;
-        width: 60px !important;
-        font-size: 28px !important;
-        top: -1px !important;
-      }
-
-      .styles_label__6xv1b.styles_dark__Vo9m3 {
-        text-transform: none !important;
-        text-shadow: none !important;
-        color: #a2acb2 !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        line-height: 14px !important;
-        position: relative !important;
-        bottom: 4px !important;
-      }
-
-      .styles_label__6xv1b.styles_dark__Vo9m3:before {
-        content: "Roll for\A"
-      }
-
-      .ct-quick-info__inspiration {
-        position: absolute !important;
-        top: -100px !important;
-        right: 310px !important;
-        height: 90px !important;
-        width: 90px !important;
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-      }
-
-
-      .ct-combat__summary-group {
-        position: absolute !important;
-        top: -14px !important;
-      }
-
-      .styles_box__6xvSR.styles_interactive__0wY9H {
-        width: 90px !important;
-        height: 65px !important;
-      }
-
-      .styles_label__Bj6YW {
-        font-size: 0 !important;
-        text-transform: none !important;
-        text-decoration: none !important;
-        text-shadow: none !important;
-        padding: 0 !important;
-      }
-
-      .styles_label__Bj6YW:after {
-        content: "Inspiration" !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        color: #a2acb2 !important;
-      }
-
-      .styles_status__wfjbc {
-        width: 70px !important;
-        height: 70px !important;
-        border-radius: 4px !important;
-      }
-
-      .ct-quick-info__inspiration>div {
-        height: 90px !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        gap: 3px !important;
-      }
-
-      .ddbc-svg.ddbc-inspiration-token-svg {
-        background-color: var(--theme-color) !important;
-        -webkit-mask-image: url('https://api.iconify.design/game-icons:mighty-force.svg') !important;
-        mask-image: url('https://api.iconify.design/game-icons:mighty-force.svg') !important;
-
-        -webkit-mask-repeat: no-repeat !important;
-        -webkit-mask-position: center !important;
-        -webkit-mask-size: 60px !important;
-
-        mask-repeat: no-repeat !important;
-        mask-position: center !important;
-        mask-size: 60px !important;
-      }
-
-      .ddbc-svg.ddbc-inspiration-token-svg g {
-        display: none !important;
-      }
-
-
-
-
-      /* HEALTH TWEAKS*/
-      .ct-quick-info__health {
-        z-index: 200 !important;
-        position: absolute !important;
-        top: -100px !important;
-        right: 0px !important;
-      }
-
-      .styles_hitPointsBox__iqcr7 {
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-        height: 90px !important;
-      }
-
-      .styles_container__nsTN6 {
-        justify-content: flex-end !important;
-        gap: 21px !important;
-      }
-
-      .styles_content__nPt0e {
-        padding: 0.5rem !important;
-      }
-
-      .styles_hitPointsBox__iqcr7 {
-        width: 300px !important;
-      }
-
-
-
-
-      /* ABILITIES TWEAKS */
-      .ct-character-header-desktop {
-        z-index: 0 !important;
-      }
-
-      .ddbc-ability-summary__label {
-        display: none !important;
-      }
-
-      .ddbc-ability-summary__heading {
-        padding-bottom: 3px !important;
-      }
-
-      .ddbc-ability-summary__primary>button {
-        font-size: 28px !important;
-      }
-
-      .ddbc-ability-summary__abbr {
-        display: inline !important;
-        font-size: 14px !important;
-        font-weight: 100 !important;
-        letter-spacing: 0.05em !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-        position: relative !important;
-        right: 10px !important;
-      }
-
-      .integrated-dice__container:hover {
-        background-color: var(--TrueSight_Tertiary) !important;
-        transform: Scale(1.1) !important;
-      }
-
-      .ct-quick-info__abilities {
-        padding: 0px 5px !important;
-        width: 567px !important;
-      }
-
-
-      .ddbc-ability-summary__secondary {
-        font-weight: 500 !important;
-        font-size: 14px !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-        top: 8px !important;
-        left: 50% !important;
-        pointer-events: none !important;
-      }
-
-      .ct-quick-info__ability {
-        position: relative !important;
-      }
-
-      .ct-quick-info__ability:not(:last-child)::after {
-        content: "" !important;
-        position: absolute !important;
-        right: -7.5px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        width: 0.5px !important;
-        height: 70% !important;
-        background: #92a2b3 !important;
-        opacity: 0.7 !important;
-      }
-
-      .ct-character-sheet--dice-enabled .ddbc-ability-summary .integrated-dice__container {
-        height: 35px !important;
-        top: -2px !important;
-      }
-
-
-
-      /* SAVING THROW TWEAKS */
-      .ct-subsection--abilities {
-        width: 276px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability {
-        position: absolute !important;
-        top: -52px !important;
-        width: 75px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--str {
-        left: -5px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--dex {
-        left: 90px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--con {
-        left: 185px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--int {
-        left: 280px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--wis {
-        left: 375px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability--cha {
-        left: 470px !important;
-      }
-
-      .ddbc-saving-throw-selection-box-svg,
-      .ct-saving-throws-pane>.ddbc-saving-throws-summary>div {
-        display: none !important;
-      }
-
-      .ct-character-sheet--dice-enabled .ddbc-saving-throws-summary__ability-modifier .integrated-dice__container {
-        width: auto !important;
-        height: auto !important;
-        padding: 1px 5px 0.5px 3px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability-modifier {
-        font-size: 12px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability-name.ddbc-saving-throws-summary__ability-name--dark-mode:after {
-        content: "Save" !important;
-        font-weight: 300 !important;
-        font-size: 11px !important;
-        position: relative !important;
-        right: -6px !important;
-      }
-
-      .ddbc-saving-throws-summary__ability-name.ddbc-saving-throws-summary__ability-name--dark-mode abbr {
-        display: none !important;
-      }
-
-      .ct-saving-throws-box {
-        height: auto !important;
-        width: 276px !important;
-        padding: 10px 20px !important;
-        z-index: 250 !important;
-      }
-
-      .ct-saving-throws-box__modifiers {
-        height: 60px !important;
-      }
-
-
-      /* SKILLS  TWEAKS */
-      .ct-skills__header,
-      .ct-skills__additional.ct-skills__additional--empty.ct-skills__additional--dark-mode {
-        display: none !important;
-      }
-
-      .ct-character-sheet-desktop .ct-subsection--skills {
-        top: unset !important;
-        bottom: 0px !important;
-        height: 100%
-      }
-
-      .ct-skills__item {
-        margin-bottom: 0px !important;
-        border-bottom: 0.5px solid #92A2B3B3 !important;
-      }
-
-      .ct-skills__list {
-        line-height: 2.15 !important;
-        max-height: 740px !important;
-      }
-
-      .ct-skills__list>div:nth-child(18) {
-        border-bottom: none !important;
-      }
-
-      .ct-skills__item .ct-skills__col--skill,
-      .ct-skills__item .ct-skills__col--modifier,
-      .ct-skills__col--adjustments {
-        border-bottom: none !important;
-      }
-
-      .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--modifier {
-        padding: 5px 2px !important;
-      }
-
-      .ct-skills__col--adjustments {
-        padding: 5px 2px 1px !important;
-      }
-
-      .ct-skills__col--proficiency {
-        width: 20px !important;
-      }
-
-      .ct-skills__col--stat {
-        width: 45px !important;
-      }
-
-      .ct-skills {
-        width: 246px !important;
-      }
-
-      .ct-skills-box {
-        padding: 9px 17px 10px 19px !important;
-        height: 770px !important;
-      }
-
-
-      /* PROFICIENCIES  TWEAKS */
-      .ct-character-sheet-desktop .ct-subsection--proficiency-groups {
-        top: unset !important;
-        bottom: 0px !important;
-        height: 250px !important;
-      }
-
-      .ct-proficiency-groups-box {
-        width: 276px !important;
-        height: 100% !important;
-        padding: 20px !important;
-      }
-
-      .ct-proficiency-groups-box .ct-proficiency-groups {
-        height: inherit !important;
-      }
-
-      .ct-proficiency-groups__group-label {
-        display: none !important;
-      }
-
-      .ct-proficiency-groups>div:nth-child(1)>div:nth-child(2):before {
-        color: var(--theme-color) !important;
-        font-weight: 700 !important;
-        content: "ARMOR: \00a0" !important;
-      }
-
-      .ct-proficiency-groups>div:nth-child(2)>div:nth-child(2):before {
-        color: var(--theme-color) !important;
-        font-weight: 700 !important;
-        content: "WEAPONS: \00a0" !important;
-      }
-
-      .ct-proficiency-groups>div:nth-child(3)>div:nth-child(2):before {
-        color: var(--theme-color) !important;
-        font-weight: 700 !important;
-        content: "TOOLS: \00a0" !important;
-      }
-
-      .ct-proficiency-groups>div:nth-child(4)>div:nth-child(2):before {
-        color: var(--theme-color) !important;
-        font-weight: 700 !important;
-        content: "LANG.: \00a0" !important;
-      }
-
-      .ct-proficiency-groups__group+.ct-proficiency-groups__group {
-        border-top: 0px !important;
-        margin-top: 5px !important;
-        padding-top: 5px !important;
-      }
-
-
-
-
-      /* COMBAT  TWEAKS */
-      .ct-character-sheet-desktop .ct-subsection--combat {
-        position: absolute !important;
-        top: -191px !important;
-        left: 350px !important;
-      }
-
-      .ct-subsection--combat {
-        background: none !important;
-      }
-
-      section.ct-combat__summary-group.ct-combat__summary-group--statuses {
-        position: absolute !important;
-        left: -350px !important;
-        top: 501px !important;
-        background: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-        width: 276px !important;
-        padding: 0px !important;
-      }
-
-      .ct-combat__statuses {
-        flex-direction: column !important;
-        height: 200px !important;
-        padding: 20px !important;
-        width: 276px !important;
-      }
-
-      .ct-combat__statuses-group+.ct-combat__statuses-group {
-        border: none !important;
-        border-top: 1px solid var(--theme-color) !important;
-        padding-top: 10px !important;
-        margin-top: 10px !important;
-      }
-
-      .ct-combat__statuses-group {
-        padding: 0px !important;
-      }
-
-      .ct-combat__summary-label {
-        color: var(--theme-color) !important;
-      }
-
-      .ct-combat__summary {
-        z-index: 150 !important;
-      }
-
-
-
-
-      /* SENSES TWEAKS */
-      .ct-senses-desktop.ct-subsection.ct-subsection--senses {
-        width: 276px !important;
-        padding: 10px 20px !important;
-        height: 60px !important;
-        position: absolute !important;
-        top: 240px !important;
-      }
-
-      .ct-senses,
-      .ct-senses__callouts {
-        height: 0px !important;
-        width: 276px !important;
-      }
-
-      .ct-senses__callout-label,
-      .ddbc-box-background {
-        display: none !important;
-      }
-
-      .ct-senses__callout-value {
-        z-index: 50 !important;
-        font-size: 14.5px !important;
-        font-weight: 300 !important;
-      }
-
-
-      .ct-senses__callout {
-        margin: 0px !important;
-        width: 276px !important;
-        display: none !important;
-      }
-
-      .ct-senses-desktop,
-      .ct-senses-box {
-        height: 50px !important;
-      }
-
-      section.ct-senses-box {
-        padding: 0px !important;
-        width: 236px !important;
-      }
-
-      .ct-senses__summary {
-        margin: 0px !important;
-        width: 236px !important;
-        height: 42px !important;
-      }
-
-
-
-
-      /* SIDEBAR TWEAKS */
-      .ct-sidebar.styles_sidebar__RrEHr {
-        top: 50px !important;
-        height: 1000px !important;
-      }
-
-      .styles_content__3knKz {
-        box-shadow: 0px 10px 50px 0px #000000cc !important;
-      }
-
-      svg.styles_border__jHreB,
-      .styles_gap__kuwYv,
-      .ct-beyond20-roll-button>span.ct-button__content {
-        display: none !important;
-      }
-
-      .styles_content__3knKz {
-        border-radius: 8px !important;
-        border: 1px solid var(--theme-color) !important;
-      }
-
-      .styles_content__3knKz {
-        padding: 20px !important;
-      }
-
-      img.ct-beyond20-icon {
-        margin: 0px !important;
-      }
-
-      .ct-decoration-manager__item-inner .ddbc-ability-summary .ddbc-box-background,
-      .ct-decoration-manager__item-inner .ddbc-ability-summary .ddbc-box-background svg.ddbc-svg.ddbc-ability-score-box-svg,
-      .ct-decorate-pane__theme .ddbc-ability-summary .ddbc-box-background,
-      .ct-decorate-pane__theme .ddbc-ability-summary .ddbc-box-background svg.ddbc-svg.ddbc-ability-score-box-svg {
-        display: block !important;
-      }
-
-      .ct-reset-pane__recover-max-hp {
-        letter-spacing: -0.05px !important;
-      }
-
-      .ct-reset-pane__recover-max-hp .ddbc-checkbox__input {
-        border-radius: 4px !important;
-      }
-
-
-
-
-
-
-      /* EXTRA GAMELOG TWEAKS */
-      .tss-8e3fk7-Container-Flex,
-      .tss-jmihpx-GameLogEntries {
-        padding: 0px !important;
-      }
-
-      .tss-8e3fk7-Container-Flex {
-        margin-bottom: 15px !important;
-        padding-bottom: 15px !important;
-        border-bottom: 1px solid var(--theme-color) !important;
-      }
-
-      .tss-wyeh8h-Avatar-Flex,
-      img.tss-1e4a2a1-AvatarPortrait {
-        width: 24px !important;
-        height: 24px !important;
-      }
-
-      .tss-8-Collapsed-ref.tss-8-Other-ref {
-        padding: 1px 8px 1px 8px !important;
-      }
-
-      .tss-dr2its-Line-Flex,
-      .tss-1yxh2yy-TimeAgo-TimeAgo {
-        font-weight: 400 !important;
-      }
-
-      .tss-rdravg-Message-Collapsed-Self-Flex.tss-8-Self-ref {
-        border-color: var(--theme-color) !important;
-        border-radius: 8px 2px 8px 8px !important;
-      }
-
-      .tss-8-Collapsed-ref.tss-8-Other-ref,
-      .tss-8-Other-ref.tss-1qn6fu1-Message-Other-Flex {
-        border-radius: 2px 8px 8px 8px !important;
-      }
-
-      span.tss-cx78hg-Action,
-      span.tss-15yp4kz-SetPreviewDescription {
-        white-space: normal !important;
-        font-weight: 400 !important;
-        text-transform: none !important;
-      }
-
-      span.tss-1tj70tb-Sender {
-        color: rgb(191, 204, 214) !important;
-      }
-
-
-      .tss-17y30t1-GameLogEntry-Other-Flex {
-        margin-bottom: 20px !important;
-        align-items: flex-start !important;
-      }
-
-      li.tss-8-Self-ref.tss-1kuahcg-GameLogEntry-Self-Flex {
-        margin-bottom: 20px !important;
-      }
-
-      .tss-17y30t1-GameLogEntry-Other-Flex,
-      .tss-1kuahcg-GameLogEntry-Self-Flex {
-        position: relative !important;
-      }
-
-      .tss-1yxh2yy-TimeAgo-TimeAgo {
-        position: absolute !important;
-        top: -3px !important;
-        right: 0px !important;
-      }
-
-      .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex {
-        background: var(--theme-color) !important;
-        border: 0px !important;
-        border-radius: 8px 2px 8px 8px !important;
-      }
-
-      .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex span,
-      .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex * .tss-1qy7qai-DieIcon {
-        color: white !important;
-      }
-
-      .tss-1dhkeq7-Divider {
-        display: none !important;
-      }
-
-      .tss-1x8v1yt-SetPreviewActionsContainer-Flex {
-        position: relative !important;
-        bottom: 3px !important;
-      }
-
-      .tss-1yxh2yy-TimeAgo-TimeAgo {
-        transform: scaleX(0.85) !important;
-        transform-origin: right !important;
-      }
-
-
-      /* BEYOND20 FIXES */
-      .beyond20-hotkeys-popup.beyond20-hotkeys-list {
-        background: hsla(213, 22%, 10%, 1) !important;
-        border-radius: 8px !important;
-        border-color: var(--theme-color) !important;
-      }
-
-      .ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20-hotkeys {
-        z-index: 4000 !important;
-        left: 320px !important;
-        top: -81px !important;
-      }
-
-      .ct-subsections {
-        z-index: 1000 !important;
-      }
-
-      .ct-character-header-desktop {
-        z-index: 2000 !important;
-      }
-
-      .beyond20-manage-hotkeys {
-        top: 79px !important;
-        right: 3px !important;
-      }
-
-
-      .beyond20-quick-roll-tooltip {
-        width: 40px !important;
-        height: 40px !important;
-        background: none !important;
-      }
-
-      img.beyond20-quick-roll-icon {
-        width: inherit !important;
-        margin: 0px !important;
-      }
-
-      /* ABOVEVTT FIXES */
-      #avtt-character-join-button {
-        position: relative !important;
-        top: -81px !important;
-        left: 420px !important;
-        color: rgb(255 255 255 / 80%) !important;
-      }
-
-      span#avtt-icon-roll-span {
-        width: fit-content !important;
-        font-weight: 500 !important;
-      }
-
-
-
-      /* QuickLinks */
-      #ddb-custom-links {
-        top: 90px !important;
-        width: 276px !important;
-        height: 140px !important;
-        padding: 15px !important;
-      }
-
-      .ddb-custom-link-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 7px !important;
-        align-content: flex-start !important;
-      }
-
-      .ddb-custom-link-pill {
-        display: flex !important;
-        align-items: center !important;
-        height: 22px !important;
-        padding: 10px 13px !important;
-
-        background-color: var(--TrueSight_Secondary) !important;
-        color: #fff !important;
-
-        font-size: 11px !important;
-        font-weight: 400 !important;
-        text-decoration: none !important;
-
-        border-radius: 100px !important;
-      }
-
-      .ddb-custom-link-pill:hover {
-        background-color: var(--TrueSight_Tertiary) !important;
-      }
-
-      .ddb-link-edit-btn {
-        position: absolute !important;
-        top: 8px !important;
-        right: 8px !important;
-        color: rgba(255, 255, 255, 0.2) !important;
-        opacity: 0.5 !important;
-        cursor: pointer !important;
-        transition: color 0.2s !important;
-        z-index: 10 !important;
-      }
-
-      .ddb-link-edit-btn:hover {
-        color: rgba(255, 255, 255, 1) !important;
-      }
-
-      .ddb-link-scroll-container {
-        width: 100% !important;
-        height: 100% !important;
-        overflow-y: auto !important;
-        box-sizing: border-box !important;
-      }
-
-
-      .ddb-modal-overlay {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        background-color: rgba(0, 0, 0, 0.85) !important;
-        backdrop-filter: blur(4px) !important;
-        z-index: 10000 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        animation: fadeIn 0.2s ease-out !important;
-      }
-
-      .ddb-modal-content {
-        background-color: var(--TrueSight_Primary) !important;
-        border-radius: 8px !important;
-        padding: 24px !important;
-        width: 550px !important;
-        max-width: 90vw !important;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8) !important;
-      }
-
-      .ddb-modal-header {
-        color: var(--theme-color) !important;
-        font-family: Roboto Condensed, sans-serif !important;
-        font-size: 18px !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.5px !important;
-        border-bottom: 1px solid var(--TrueSight_Secondary) !important;
-        padding-bottom: 12px !important;
-        margin-bottom: 16px !important;
-      }
-
-      .ddb-modal-desc {
-        color: #9facb2 !important;
-        font-size: 13px !important;
-        margin-bottom: 8px !important;
-      }
-
-      .ddb-modal-desc code {
-        background: rgb(30, 37, 42) !important;
-        padding: 2px 5px !important;
-        border-radius: 4px !important;
-        color: #ccc !important;
-      }
-
-      .ddb-modal-textarea {
-        width: 100% !important;
-        height: 300px !important;
-        background-color: #0b1013 !important;
-        color: #ececec !important;
-        border: 0 !important;
-        padding: 8px 12px !important;
-        font-size: 11px !important;
-        line-height: 1.6 !important;
-        resize: vertical !important;
-        box-sizing: border-box !important;
-        outline: none !important;
-        border-radius: 4px !important;
-      }
-
-      .ddb-modal-actions {
-        margin-top: 10px !important;
-        display: flex !important;
-        justify-content: flex-end !important;
-        gap: 12px !important;
-      }
-
-      .ddb-modal-btn {
-        padding: 8px 20px !important;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        font-size: 12px !important;
-        border-radius: 8px !important;
-        cursor: pointer !important;
-        transition: all 0.2s !important;
-      }
-
-      .ddb-modal-btn.save,
-      .ddb-modal-btn.cancel {
-        background: var(--TrueSight_Secondary) !important;
-        color: #fff !important;
-        border: 0 !important;
-      }
-
-      .ddb-modal-btn.save:hover,
-      .ddb-modal-btn.cancel:hover {
-        background: var(--TrueSight_Tertiary) !important;
-      }
-
-      #ddb-links-editor-modal>div>textarea:focus {
-        background-color: #0b1013 !important;
-      }
-
-      body::before {
-        content: "" !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        height: 250px !important;
-
-        background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.0) 100%) !important;
-      }
-    }
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+@media screen and (min-width: 1240px) {
+
+  html * {
+    font-family: "Google Sans Flex", sans-serif !important;
+  }
+
+  .ddbc-character-tidbits__heading>h1,
+  .ct-skills__col--stat,
+  .styles_tabButton__wvSLf,
+  .ct-combat__summary-label,
+  .ct-proficiency-groups__group-items,
+  .ddbc-ability-summary__abbr,
+  [type="text"] {
+    font-family: Majesty !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  [type="search"] {
+    font-family: "Google Sans Flex", sans-serif !important;
+  }
+
+  input {
+    font-family: "Google Sans Flex", sans-serif !important;
+  }
+
+  :root {
+    --TrueSight_UI: hsl(84, 48%, 59%);
+    --TrueSight_Primary: hsla(213, 22%, 10%, .95);
+    --TrueSight_Secondary: #262F3B;
+    --TrueSight_Tertiary: hsl(210, 48%, 27%);
+  }
+
+
+
+  /* --- GENERAL TWEAKS --- */
+
+  .ct-character-sheet:before {
+    height: 0px !important;
+  }
+
+  .ct-subsection,
+  .ct-quick-info__abilities {
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+  }
+
+  div.ddbc-box-background>svg {
+    display: none !important;
+  }
+
+  html body#site {
+    background-position: center 0px !important;
+    background-size: cover !important;
+  }
+
+  .integrated-dice__container {
+    border: 0 !important;
+    border-radius: 4px !important;
+    background-color: var(--TrueSight_Secondary) !important;
+  }
+
+  .ct-subsection__footer {
+    display: none !important;
+  }
+
+  .ct-slot-manager__slot {
+    border-radius: 4px !important;
+  }
+
+  .ct-slot-manager__slot:before {
+    border-radius: 1px !important;
+  }
+
+  .ct-character-sheet {
+    border: 0 !important;
+    margin-top: 10px !important;
+  }
+
+
+
+  /* --- PRIMARY BOX TWEAKS --- */
+
+  .ct-inventory-item__meta-item,
+  span.ct-spells-spell__meta-item,
+  span.ddbc-combat-attack__meta-item,
+  .ddbc-attunement-slot__meta,
+  .ct-attunement__meta {
+    display: none !important;
+  }
+
+  .styles_buttons__hGhtB>button {
+    text-transform: unset !important;
+    font-weight: 500 !important;
+  }
+
+  button[data-testid="FEATURES_TRAITS"] {
+    font-size: 0 !important;
+  }
+
+  button[data-testid="FEATURES_TRAITS"]::after {
+    content: "Features" !important;
+    font-size: 14px !important;
+  }
+
+  .ddbc-note-components {
+    font-size: 9px !important;
+    line-height: 1.1 !important;
+  }
+
+  .ct-inventory-item {
+    line-height: 1.1 !important;
+    padding: 5px 0 !important;
+  }
+
+  .ct-character-sheet-desktop .ct-subsection--primary-box {
+    top: -105px !important;
+    bottom: unset !important;
+    height: 875px !important;
+    z-index: 300 !important;
+  }
+
+  .ct-primary-box {
+    height: 100% !important;
+  }
+
+  .ct-primary-box .ct-actions,
+  .ct-primary-box .ct-creatures,
+  .ct-primary-box .ct-description,
+  .ct-primary-box .ct-equipment,
+  .ct-primary-box .ct-extras,
+  .ct-primary-box .ct-features,
+  .ct-primary-box .ct-notes,
+  .ct-primary-box .ct-spells,
+  .styles_tabList__eedTo>menu+div {
+    height: 100% !important;
+  }
+
+  .ct-content-group {
+    margin-top: 10px !important;
+  }
+
+  .styles_content__QjnYw>div:nth-child(2) {
+    margin-top: 0px !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--cost {
+    font-size: 0 !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--cost::after {
+    content: "COST" !important;
+    font-size: 11px !important;
+  }
+
+  .styles_tableHeader__Ow6Oy>div:nth-child(2),
+  .ddbc-combat-attack__name {
+    flex: 2 1 0 !important;
+  }
+
+  .styles_tableHeader__Ow6Oy>div:nth-child(5),
+  .ddbc-combat-attack__damage {
+    min-width: 90px !important;
+  }
+
+  .ddbc-combat-item-attack__damage button,
+  .ddbc-spell-damage-effect__damages button,
+  .ddbc-spell-damage-effect__healing button,
+  .ddbc-combat-attack__damage button {
+    padding-left: 10px !important;
+    max-width: 100px !important;
+  }
+
+  .styles_tabList__Q4CqK>menu {
+    margin: 0 0 1rem !important;
+    height: 25px !important;
+    vertical-align: top !important;
+    align-items: flex-end !important;
+  }
+
+  button.styles_tabButton__wvSLf {
+    gap: 0 !important;
+    display: inline-grid !important;
+  }
+
+
+
+  /* --- EXTRA INVENTORY TWEAKS --- */
+
+  .ct-inventory-item__weight,
+  .ct-inventory-item__quantity,
+  .ct-inventory-item__cost,
+  .ct-inventory__col--weight,
+  .ct-inventory__col--qty,
+  .ct-inventory__col--cost {
+    text-align: center !important;
+  }
+
+  .ct-equipment__container-weight {
+    padding-left: 8px !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--active {
+    font-size: 0 !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--active:after {
+    content: "ACT." !important;
+    font-size: 11px !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--weight {
+    font-size: 0 !important;
+  }
+
+  .ct-inventory__col.ct-inventory__col--weight:after {
+    content: "WGT" !important;
+    font-size: 11px !important;
+  }
+
+  button[data-testid="my-inventory"],
+  button[data-testid="party-inventory"] {
+    font-size: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    background-color: var(--theme-color) !important;
+
+    -webkit-mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    -webkit-mask-size: 25px !important;
+    mask-repeat: no-repeat !important;
+    mask-position: center !important;
+    mask-size: 25px !important;
+  }
+
+  button[data-testid="my-inventory"] {
+    -webkit-mask-image: url('https://api.iconify.design/game-icons:swordman.svg') !important;
+    mask-image: url('https://api.iconify.design/game-icons:swordman.svg') !important;
+  }
+
+  button[data-testid="party-inventory"] {
+    -webkit-mask-image: url('https://api.iconify.design/game-icons:mimic-chest.svg') !important;
+    mask-image: url('https://api.iconify.design/game-icons:mimic-chest.svg') !important;
+  }
+
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button {
+    background-color: rgba(255, 255, 255, .25) !important;
+    border-radius: 8px !important;
+  }
+
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button[aria-checked=true] {
+    background-color: var(--theme-color) !important;
+  }
+
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li>button[aria-checked=false]:hover {
+    background-color: rgba(255, 255, 255, .5) !important;
+  }
+
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu>li {
+    background-color: var(--TrueSight_Secondary) !important;
+    height: 34px !important;
+    width: 34px !important;
+    border-radius: 4px !important;
+  }
+
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-subsections>div.ct-subsection.ct-subsection--primary-box>div>div.styles_tabList__fix2X.styles_themed__Plffn.styles_tabList__Q4CqK>div>section>div>menu {
+    display: flex !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    left: 0px !important;
+    height: 0px !important;
+    top: 5px !important;
+    z-index: 100
+  }
+
+  button.styles_overviewPrimaryButton__j84A5 {
+    max-width: 40% !important;
+  }
+
+  .styles_fullwidth__tseG2 .styles_tabs__aTttL:after {
+    display: none !important;
+  }
+
+
+
+  /* --- EXTRA SPELLS TWEAKS --- */
+
+  .ct-spells-filter__box,
+  .ct-spells-filter__advanced {
+    display: none !important;
+  }
+
+  .ct-spells-filter__interactions {
+    flex-direction: row-reverse !important;
+    height: 0px !important;
+    margin: 0px !important;
+  }
+
+  .ct-spells-filter__callout {
+    position: absolute !important;
+    top: 35px !important;
+    right: 0px !important;
+  }
+
+  .ct-spells-level-casting {
+    border: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 5px !important;
+  }
+
+  .character-button-block-small {
+    padding: 5px 0 !important;
+  }
+
+
+
+  /* --- NAVI TWEAKS --- */
+
+  ._wrapper_icpeg_1 {
+    background: none !important;
+    border: none !important;
+    top: 12px !important;
+  }
+
+  [id="dropdown-Play-D&D"],
+  [id="dropdown-Rules"],
+  [id="dropdown-Library"] {
+    overflow: hidden !important;
+    padding: 0 0 0 0 !important;
+    top: 0px !important;
+    border-radius: 8px !important;
+    z-index: -1 !important;
+    background: var(--TrueSight_Primary) !important;
+  }
+
+  ._panelColumns_icpeg_145 {
+    grid-template-columns: repeat(5, minmax(200px, 220px)) !important;
+  }
+
+  [data-testid="logo-link"] {
+    display: none !important;
+  }
+
+  svg._chevronIcon_icpeg_134 {
+    display: none !important;
+  }
+
+  ._linkHighlight_icpeg_51 {
+    background-image: none !important;
+  }
+
+  ._linkHighlight_icpeg_51:after {
+    background-image: none !important;
+  }
+
+  ._userButtonText_1r3mo_49,
+  ._chevronDown_1r3mo_12 {
+    display: none !important;
+  }
+
+  ._userButton_1r3mo_1._buttonLink_wtjju_1 {
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  ._avatarImage_rihom_1._avatarImage_1r3mo_25 {
+    margin: 0 !important;
+    border-radius: 4px !important;
+    height: 50px !important;
+    width: 50px !important;
+  }
+
+  ._linkHighlight_icpeg_51._menuLink_icpeg_33 {
+    padding: 6px 18px 5px 18px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.25px !important;
+    border: 1px solid var(--TrueSight_Secondary) !important;
+    height: 31.2px !important;
+    align-items: center !important;
+    margin-right: 10px !important;
+  }
+
+  ._menuLink_icpeg_33 {
+    line-height: 19px !important;
+  }
+
+  ._linkHighlight_icpeg_51._menuLink_icpeg_33:hover {
+    border: 1px solid var(--TrueSight_Tertiary) !important;
+  }
+
+  ._linkHighlight_icpeg_51._menuLink_icpeg_33:focus {
+    background: var(--TrueSight_Secondary) !important;
+  }
+
+  [data-item_name="Community"],
+  [data-item_name="Subscribe"],
+  [data-item_name="Marketplace"],
+  [data-item_name="Search"] {
+    display: none !important;
+  }
+
+  [data-item_name="Play D&D"] {
+    font-size: 0px !important;
+    display: grid !important;
+  }
+
+  [data-item_name="Play D&D"]:before {
+    content: "My D&D" !important;
+    font-size: 13px !important;
+  }
+
+  [data-item_name="Rules"],
+  [data-item_name="Library"] {
+    font-size: 13px !important;
+  }
+
+  ._panel_icpeg_92 {
+    position: absolute !important;
+    top: 70px !important;
+  }
+
+  .ct-character-header-desktop__group.ct-character-header-desktop__group-tidbits {
+    position: absolute !important;
+  }
+
+  .ct-character-header-desktop {
+    width: 315px !important;
+  }
+
+  .styles_campaignButtonGroup__f3klc:hover,
+  .styles_campaignSummary__eY5SU:hover,
+  .ct-character-header-desktop__button:hover {
+    border: 1px solid var(--TrueSight_Tertiary) !important;
+    background: var(--TrueSight_Tertiary) !important;
+    transform: Scale(1.025) !important;
+  }
+
+  .ct-character-header-desktop__button,
+  .styles_campaignSummary__eY5SU,
+  .ct-character-header-desktop__button,
+  .styles_campaignButtonGroup__f3klc {
+    padding: 6px 18px 5px 18px !important;
+    margin: 0 !important;
+    margin-right: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.25px !important;
+    border-radius: 8px !important;
+    background: var(--TrueSight_Secondary) !important;
+    border: 1px solid var(--TrueSight_Secondary) !important;
+    width: auto !important;
+  }
+
+  .styles_summaryLabel__xq6fg:after {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.25px !important;
+    content: "Campaign" !important;
+    visibility: visible !important;
+    position: relative !important;
+    top: 0.5px !important;
+  }
+
+  .styles_campaignButton__UQvTD:after {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.25px !important;
+    content: "Game Log" !important;
+    position: relative !important;
+    top: 0.5px !important;
+  }
+
+  .styles_campaignSummary__eY5SU {
+    display: grid !important;
+    grid-template-rows: 0 1fr !important;
+  }
+
+  .ct-character-header-desktop {
+    padding: 10px 5px 40px !important;
+    font-size: 13px !important;
+    color: #c4cbce !important;
+  }
+
+  .ct-character-header-desktop__group.ct-character-header-desktop__group--short-rest,
+  .ct-character-header-desktop__group.ct-character-header-desktop__group--long-rest,
+  .styles_container__9OvpY,
+  .ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20,
+  #avtt-character-join-button {
+    position: relative !important;
+    right: -555px !important;
+    top: -86px !important;
+  }
+
+
+
+  /* --- ADDITIONAL NAVI TWEAKS (order as in code) --- */
+
+  ._NavigationMenuContainer_1djtw_1 {
+    justify-content: center !important;
+    display: grid !important;
+    grid-template-rows: 1fr 0 !important;
+  }
+
+  ._wrapper_icpeg_1 {
+    width: 1200px !important;
+    display: grid !important;
+    justify-content: start !important;
+  }
+
+  ._menuContainer_icpeg_8 {
+    border-radius: 8px !important;
+    padding: 7px 8px !important;
+    margin-bottom: 12px !important;
+    width: 560px !important;
+    max-width: none !important;
+    flex-direction: row-reverse !important;
+  }
+
+  ._menuNavList_icpeg_385 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    align-content: center !important;
+    width: min-content !important;
+  }
+
+  ._menuNav_icpeg_29 {
+    justify-content: flex-end !important;
+  }
+
+  ._menuIcons_icpeg_220 {
+    flex-direction: row-reverse !important;
+  }
+
+  ._userDropdownWrapper_1r3mo_83 {
+    left: -8px !important;
+    right: auto !important;
+    top: 65px !important;
+  }
+
+  ._wrapper_n1ake_1 {
+    border-radius: 8px !important;
+  }
+
+  body::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 12px !important;
+    width: 1200px !important;
+    left: calc((100% - 1200px) / 2) !important;
+    right: calc(100% - 600px) !important;
+    height: 64px !important;
+    border-radius: 8px !important;
+    background: var(--TrueSight_Primary) !important;
+    box-shadow: 0px 0px 1000px 200px #00000070 !important;
+    margin-left: var(--tsui-nav-offset, 0px) !important;
+    transition: margin-left 0.1s ease !important;
+  }
+
+
+
+  /* --- NAVI POINTER EVENTS FIX --- */
+
+  .header-wrapper.header-wrapper--characters,
+  [name="megamenu"],
+  div#mega-menu-target,
+  header._NavigationMenuContainer_1djtw_1,
+  ._wrapper_icpeg_1 {
+    pointer-events: none !important;
+  }
+
+  ._menuContainer_icpeg_8,
+  ._searchContainer_e9ekp_1 {
+    pointer-events: auto !important;
+  }
+
+
+
+  /* --- ALLWAYS SHOW SEARCHBAR --- */
+
+  #site-main.site-navigation-menu #mega-menu-target {
+    height: 75px !important;
+  }
+
+  ._searchContainer_e9ekp_1 {
+    display: block !important;
+    position: relative !important;
+    top: -55.5px !important;
+    left: 55px !important;
+    width: 199px !important;
+    background: none !important;
+  }
+
+  ._search_e9ekp_1._search_e9ekp_1 {
+    background: none !important;
+    border: 1px solid var(--TrueSight_Secondary) !important;
+    padding: 0 15px 0 15px !important;
+    border-radius: 50px !important;
+    height: 31.2px !important;
+  }
+
+  ._search_e9ekp_1._search_e9ekp_1:hover,
+  ._search_e9ekp_1._search_e9ekp_1:focus {
+    border: 1px solid var(--TrueSight_Tertiary) !important;
+  }
+
+  ._searchIcon_e9ekp_79 {
+    display: none !important;
+  }
+
+  ._searchInput_e9ekp_42 {
+    padding-left: 0px !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+
+  ._searchInput_e9ekp_42::placeholder {
+    opacity: 0.5 !important;
+    padding-left: 0px !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+
+  ._closeIcon_e9ekp_91 {
+    top: 3px !important;
+    padding: 0 4px !important;
+    height: 24px !important;
+  }
+
+  ._suggestionsListWrapper_e9ekp_110 {
+    border-radius: 8px !important;
+    top: 65px !important;
+  }
+
+
+
+  /* --- HEADING TWEAKS --- */
+
+  .ddbc-character-tidbits__menu-callout,
+  .ct-character-header-desktop__group--share,
+  .ct-beyond20-settings,
+  .ct-character-header-desktop__button-icon,
+  .ct-character-header-desktop__group.ct-character-header-desktop__group--builder,
+  .styles_summaryName__wOtsW,
+  #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-character-header-desktop>div.styles_container__9OvpY>span {
+    display: none !important;
+  }
+  .styles_characterName__2x8wQ {
+    max-width: 310px !important;
+  }
+
+
+  .styles_container__9OvpY {
+    width: auto !important;
+  }
+
+  .styles_summaryLabel__xq6fg {
+    font-size: 0 !important;
+    display: contents !important;
+  }
+
+  .ct-character-header-desktop__button-label {
+    margin: 0 !important;
+    position: relative !important;
+    top: 0.5px !important;
+  }
+
+  svg.styles_campaignButtonIcon__0f687 {
+    display: none !important;
+  }
+
+  .ddbc-character-tidbits__body,
+  .ddbc-character-summary {
+    color: white !important;
+    font-weight: 300 !important;
+  }
+
+  .ddbc-character-tidbits {
+    gap: 5px !important;
+  }
+
+
+
+  /* --- ADDITIONAL HEADING TWEAKS*/
+
+  .ct-quick-info {
+    z-index: 200 !important;
+  }
+
+  .ct-combat__summary-group--initiative {
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+    height: 90px !important;
+    width: 90px !important;
+    right: 710px !important;
+  }
+
+  .ct-combat__summary-group--initiative>section>div.styles_advantage__wjAyd>span>span>svg {
+    position: relative !important;
+    top: -75px !important;
+    right: 5px !important;
+  }
+
+  .ct-combat__summary-group--ac {
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+    right: 610px !important;
+    height: 90px !important;
+    width: 90px !important;
+  }
+
+  .ct-quick-info__box--proficiency {
+    position: absolute !important;
+    top: -100px !important;
+    right: 510px !important;
+    height: 90px !important;
+    width: 90px !important;
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+  }
+
+  .ct-quick-info__box--speed {
+    position: absolute !important;
+    top: -100px !important;
+    right: 410px !important;
+    height: 90px !important;
+    width: 90px !important;
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+  }
+
+  .ct-speed-box__label,
+  .ct-proficiency-bonus-box__label {
+    text-transform: none !important;
+    text-shadow: none !important;
+    color: #a2acb2 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 14px !important;
+    bottom: 8px !important;
+  }
+
+  .ddbc-armor-class-box__label {
+    text-transform: none !important;
+    text-shadow: none !important;
+    color: #a2acb2 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 14px !important;
+    bottom: -9.75px !important;
+  }
+
+  .ddbc-armor-class-box {
+    top: -4.5px !important;
+    font-weight: 500 !important;
+  }
+
+  .ddbc-armor-class-box__value {
+    letter-spacing: 1px !important;
+    font-size: 28px !important;
+    top: 0.25px !important;
+  }
+
+  .ct-speed-box__box-value>span>span:nth-child(1) {
+    font-size: 28px !important;
+    position: relative !important;
+    left: 2px !important;
+    top: 10px !important;
+    font-weight: 500 !important;
+  }
+
+  .ct-proficiency-bonus-box__value>span {
+    font-size: 28px !important;
+    position: relative !important;
+    right: 3.5px !important;
+    top: 10px !important;
+    font-weight: 500 !important;
+  }
+
+  .ct-speed-box__box-value>span>span:nth-child(1):after {
+    content: "\200A ft." !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+
+  .ct-speed-box__heading {
+    position: relative !important;
+    bottom: 0 !important;
+    top: 52px !important;
+    padding: 0 !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    font-weight: 500 !important;
+  }
+
+  .ct-speed-box__box-value {
+    position: relative !important;
+    top: -17px !important;
+  }
+
+  .ct-proficiency-bonus-box__label:before {
+    content: "Proficiency\A" !important;
+    white-space: pre !important;
+  }
+
+  .ddbc-armor-class-box__label:before {
+    content: "Armor\A" !important;
+    white-space: pre !important;
+  }
+
+  .ct-proficiency-bonus-box__heading,
+  span.styles_label__L8mZK.styles_largeLabel__E3v8Y.styles_labelSignColor__Klmbs,
+  .ct-combat__summary-group--ac>section>div:nth-child(3) {
+    display: none !important;
+  }
+
+  section.styles_box__PLQui {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .ct-combat__summary-group--initiative>section>div.styles_value__hqDak>button {
+    height: 33px !important;
+    width: 60px !important;
+    font-size: 28px !important;
+    top: -1px !important;
+  }
+
+  .styles_label__6xv1b.styles_dark__Vo9m3 {
+    text-transform: none !important;
+    text-shadow: none !important;
+    color: #a2acb2 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 14px !important;
+    position: relative !important;
+    bottom: 4px !important;
+  }
+
+  .styles_label__6xv1b.styles_dark__Vo9m3:before {
+    content: "Roll for\A"
+  }
+
+  .ct-quick-info__inspiration {
+    position: absolute !important;
+    top: -100px !important;
+    right: 310px !important;
+    height: 90px !important;
+    width: 90px !important;
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+  }
+
+  .ct-combat__summary-group {
+    position: absolute !important;
+    top: -14px !important;
+  }
+
+  .styles_box__6xvSR.styles_interactive__0wY9H {
+    width: 90px !important;
+    height: 65px !important;
+  }
+
+  .styles_label__Bj6YW {
+    font-size: 0 !important;
+    text-transform: none !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .styles_label__Bj6YW:after {
+    content: "Inspiration" !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #a2acb2 !important;
+  }
+
+  .styles_status__wfjbc {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 4px !important;
+  }
+
+  .ct-quick-info__inspiration>div {
+    height: 90px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+
+  .ddbc-svg.ddbc-inspiration-token-svg {
+    background-color: var(--theme-color) !important;
+    -webkit-mask-image: url('https://api.iconify.design/game-icons:mighty-force.svg') !important;
+    mask-image: url('https://api.iconify.design/game-icons:mighty-force.svg') !important;
+
+    -webkit-mask-repeat: no-repeat !important;
+    -webkit-mask-position: center !important;
+    -webkit-mask-size: 60px !important;
+
+    mask-repeat: no-repeat !important;
+    mask-position: center !important;
+    mask-size: 60px !important;
+  }
+
+  .ddbc-svg.ddbc-inspiration-token-svg g {
+    display: none !important;
+  }
+
+
+
+  /* --- HEALTH TWEAKS*/
+
+  .ct-quick-info__health {
+    z-index: 200 !important;
+    position: absolute !important;
+    top: -100px !important;
+    right: 0px !important;
+  }
+
+  .styles_hitPointsBox__iqcr7 {
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+    height: 90px !important;
+  }
+
+  .styles_container__nsTN6 {
+    justify-content: flex-end !important;
+    gap: 21px !important;
+  }
+
+  .styles_content__nPt0e {
+    padding: 0.5rem !important;
+  }
+
+  .styles_hitPointsBox__iqcr7 {
+    width: 300px !important;
+  }
+
+
+
+  /* --- ABILITIES TWEAKS --- */
+
+  .ct-character-header-desktop {
+    z-index: 0 !important;
+  }
+
+  .ddbc-ability-summary__label {
+    display: none !important;
+  }
+
+  .ddbc-ability-summary__heading {
+    padding-bottom: 3px !important;
+  }
+
+  .ddbc-ability-summary__primary>button {
+    font-size: 28px !important;
+  }
+
+  .ddbc-ability-summary__abbr {
+    display: inline !important;
+    font-size: 14px !important;
+    font-weight: 100 !important;
+    letter-spacing: 0.05em !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    position: relative !important;
+    right: 10px !important;
+  }
+
+  .integrated-dice__container:hover {
+    background-color: var(--TrueSight_Tertiary) !important;
+    transform: Scale(1.1) !important;
+  }
+
+  .ct-quick-info__abilities {
+    padding: 0px 5px !important;
+    width: 567px !important;
+  }
+
+  .ddbc-ability-summary__secondary {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    top: 8px !important;
+    left: 50% !important;
+    pointer-events: none !important;
+  }
+
+  .ct-quick-info__ability {
+    position: relative !important;
+  }
+
+  .ct-quick-info__ability:not(:last-child)::after {
+    content: "" !important;
+    position: absolute !important;
+    right: -7.5px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 0.5px !important;
+    height: 70% !important;
+    background: #92a2b3 !important;
+    opacity: 0.7 !important;
+  }
+
+  .ct-character-sheet--dice-enabled .ddbc-ability-summary .integrated-dice__container {
+    height: 35px !important;
+    top: -2px !important;
+  }
+
+
+
+  /* --- SAVING THROW TWEAKS --- */
+
+  .ct-subsection--abilities {
+    width: 276px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability {
+    position: absolute !important;
+    top: -52px !important;
+    width: 75px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--str {
+    left: -5px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--dex {
+    left: 90px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--con {
+    left: 185px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--int {
+    left: 280px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--wis {
+    left: 375px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability--cha {
+    left: 470px !important;
+  }
+
+  .ddbc-saving-throw-selection-box-svg,
+  .ct-saving-throws-pane>.ddbc-saving-throws-summary>div {
+    display: none !important;
+  }
+
+  .ct-character-sheet--dice-enabled .ddbc-saving-throws-summary__ability-modifier .integrated-dice__container {
+    width: auto !important;
+    height: auto !important;
+    padding: 1px 5px 0.5px 3px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability-modifier {
+    font-size: 12px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability-name.ddbc-saving-throws-summary__ability-name--dark-mode:after {
+    content: "Save" !important;
+    font-weight: 300 !important;
+    font-size: 11px !important;
+    position: relative !important;
+    right: -6px !important;
+  }
+
+  .ddbc-saving-throws-summary__ability-name.ddbc-saving-throws-summary__ability-name--dark-mode abbr {
+    display: none !important;
+  }
+
+  .ct-saving-throws-box {
+    height: auto !important;
+    width: 276px !important;
+    padding: 10px 20px !important;
+    z-index: 250 !important;
+  }
+
+  .ct-saving-throws-box__modifiers {
+    height: 60px !important;
+  }
+
+
+
+  /* --- SKILLS TWEAKS --- */
+
+  .ct-skills__header,
+  .ct-skills__additional.ct-skills__additional--empty.ct-skills__additional--dark-mode {
+    display: none !important;
+  }
+
+  .ct-character-sheet-desktop .ct-subsection--skills {
+    top: unset !important;
+    bottom: 0px !important;
+    height: 100%
+  }
+
+  .ct-skills__item {
+    margin-bottom: 0px !important;
+    border-bottom: 0.5px solid #92A2B3B3 !important;
+  }
+
+  .ct-skills__list {
+    line-height: 2.15 !important;
+    max-height: 740px !important;
+  }
+
+  .ct-skills__list>div:nth-child(18) {
+    border-bottom: none !important;
+  }
+
+  .ct-skills__item .ct-skills__col--skill,
+  .ct-skills__item .ct-skills__col--modifier,
+  .ct-skills__col--adjustments {
+    border-bottom: none !important;
+  }
+
+  .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--modifier {
+    padding: 5px 2px !important;
+  }
+
+  .ct-skills__col--adjustments {
+    padding: 5px 2px 1px !important;
+  }
+
+  .ct-skills__col--proficiency {
+    width: 20px !important;
+  }
+
+  .ct-skills__col--stat {
+    width: 45px !important;
+  }
+
+  .ct-skills {
+    width: 246px !important;
+  }
+
+  .ct-skills-box {
+    padding: 9px 17px 10px 19px !important;
+    height: 770px !important;
+  }
+
+
+
+  /* --- PROFICIENCIES TWEAKS --- */
+
+  .ct-character-sheet-desktop .ct-subsection--proficiency-groups {
+    top: unset !important;
+    bottom: 0px !important;
+    height: 250px !important;
+  }
+
+  .ct-proficiency-groups-box {
+    width: 276px !important;
+    height: 100% !important;
+    padding: 20px !important;
+  }
+
+  .ct-proficiency-groups-box .ct-proficiency-groups {
+    height: inherit !important;
+  }
+
+  .ct-proficiency-groups__group-label {
+    display: none !important;
+  }
+
+  .ct-proficiency-groups>div:nth-child(1)>div:nth-child(2):before {
+    color: var(--theme-color) !important;
+    font-weight: 700 !important;
+    content: "ARMOR: \00a0" !important;
+  }
+
+  .ct-proficiency-groups>div:nth-child(2)>div:nth-child(2):before {
+    color: var(--theme-color) !important;
+    font-weight: 700 !important;
+    content: "WEAPONS: \00a0" !important;
+  }
+
+  .ct-proficiency-groups>div:nth-child(3)>div:nth-child(2):before {
+    color: var(--theme-color) !important;
+    font-weight: 700 !important;
+    content: "TOOLS: \00a0" !important;
+  }
+
+  .ct-proficiency-groups>div:nth-child(4)>div:nth-child(2):before {
+    color: var(--theme-color) !important;
+    font-weight: 700 !important;
+    content: "LANG.: \00a0" !important;
+  }
+
+  .ct-proficiency-groups__group+.ct-proficiency-groups__group {
+    border-top: 0px !important;
+    margin-top: 5px !important;
+    padding-top: 5px !important;
+  }
+
+
+
+  /* --- COMBAT TWEAKS --- */
+
+  .ct-character-sheet-desktop .ct-subsection--combat {
+    position: absolute !important;
+    top: -191px !important;
+    left: 350px !important;
+  }
+
+  .ct-subsection--combat {
+    background: none !important;
+  }
+
+  section.ct-combat__summary-group.ct-combat__summary-group--statuses {
+    position: absolute !important;
+    left: -350px !important;
+    top: 501px !important;
+    background: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+    width: 276px !important;
+    padding: 0px !important;
+  }
+
+  .ct-combat__statuses {
+    flex-direction: column !important;
+    height: 200px !important;
+    padding: 20px !important;
+    width: 276px !important;
+  }
+
+  .ct-combat__statuses-group+.ct-combat__statuses-group {
+    border: none !important;
+    border-top: 1px solid var(--theme-color) !important;
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  .ct-combat__statuses-group {
+    padding: 0px !important;
+  }
+
+  .ct-combat__summary-label {
+    color: var(--theme-color) !important;
+  }
+
+  .ct-combat__summary {
+    z-index: 150 !important;
+  }
+
+
+
+  /* --- SENSES TWEAKS --- */
+
+  .ct-senses-desktop.ct-subsection.ct-subsection--senses {
+    width: 276px !important;
+    padding: 10px 20px !important;
+    height: 60px !important;
+    position: absolute !important;
+    top: 240px !important;
+  }
+
+  .ct-senses,
+  .ct-senses__callouts {
+    height: 0px !important;
+    width: 276px !important;
+  }
+
+  .ct-senses__callout-label,
+  .ddbc-box-background {
+    display: none !important;
+  }
+
+  .ct-senses__callout-value {
+    z-index: 50 !important;
+    font-size: 14.5px !important;
+    font-weight: 300 !important;
+  }
+
+  .ct-senses__callout {
+    margin: 0px !important;
+    width: 276px !important;
+    display: none !important;
+  }
+
+  .ct-senses-desktop,
+  .ct-senses-box {
+    height: 50px !important;
+  }
+
+  section.ct-senses-box {
+    padding: 0px !important;
+    width: 236px !important;
+  }
+
+  .ct-senses__summary {
+    margin: 0px !important;
+    width: 236px !important;
+    height: 42px !important;
+  }
+
+
+
+  /* --- SIDEBAR TWEAKS --- */
+
+  .ct-sidebar.styles_sidebar__RrEHr {
+    top: 58px !important;
+    height: 1005px !important;
+  }
+
+  .styles_controls__NSnn3 {
+    height: 18px !important;
+  }
+
+  .styles_content__3knKz {
+    box-shadow: 0px 10px 50px 0px #000000cc !important;
+  }
+
+  svg.styles_border__jHreB,
+  .styles_gap__kuwYv,
+  .ct-beyond20-roll-button>span.ct-button__content {
+    display: none !important;
+  }
+
+  .styles_content__3knKz {
+    border-radius: 8px !important;
+    border: 1px solid var(--theme-color) !important;
+  }
+
+  .styles_content__3knKz {
+    padding: 20px !important;
+  }
+
+  img.ct-beyond20-icon {
+    margin: 0px !important;
+  }
+
+  .ct-decoration-manager__item-inner .ddbc-ability-summary .ddbc-box-background,
+  .ct-decoration-manager__item-inner .ddbc-ability-summary .ddbc-box-background svg.ddbc-svg.ddbc-ability-score-box-svg,
+  .ct-decorate-pane__theme .ddbc-ability-summary .ddbc-box-background,
+  .ct-decorate-pane__theme .ddbc-ability-summary .ddbc-box-background svg.ddbc-svg.ddbc-ability-score-box-svg {
+    display: block !important;
+  }
+
+  .ct-reset-pane__recover-max-hp {
+    letter-spacing: -0.05px !important;
+  }
+
+  .ct-reset-pane__recover-max-hp .ddbc-checkbox__input {
+    border-radius: 4px !important;
+  }
+
+
+
+  /* --- EXTRA GAMELOG TWEAKS --- */
+
+  .tss-8e3fk7-Container-Flex,
+  .tss-jmihpx-GameLogEntries {
+    padding: 0px !important;
+  }
+
+  .tss-8e3fk7-Container-Flex {
+    margin-bottom: 15px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid var(--theme-color) !important;
+  }
+
+  .tss-wyeh8h-Avatar-Flex,
+  img.tss-1e4a2a1-AvatarPortrait {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .tss-8-Collapsed-ref.tss-8-Other-ref {
+    padding: 1px 8px 1px 8px !important;
+  }
+
+  .tss-dr2its-Line-Flex,
+  .tss-1yxh2yy-TimeAgo-TimeAgo {
+    font-weight: 400 !important;
+  }
+
+  .tss-rdravg-Message-Collapsed-Self-Flex.tss-8-Self-ref {
+    border-color: var(--theme-color) !important;
+    border-radius: 8px 2px 8px 8px !important;
+  }
+
+  .tss-8-Collapsed-ref.tss-8-Other-ref,
+  .tss-8-Other-ref.tss-1qn6fu1-Message-Other-Flex {
+    border-radius: 2px 8px 8px 8px !important;
+  }
+
+  span.tss-cx78hg-Action,
+  span.tss-15yp4kz-SetPreviewDescription {
+    white-space: normal !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+  }
+
+  span.tss-1tj70tb-Sender {
+    color: rgb(191, 204, 214) !important;
+  }
+
+  .tss-17y30t1-GameLogEntry-Other-Flex {
+    margin-bottom: 20px !important;
+    align-items: flex-start !important;
+  }
+
+  li.tss-8-Self-ref.tss-1kuahcg-GameLogEntry-Self-Flex {
+    margin-bottom: 20px !important;
+  }
+
+  .tss-17y30t1-GameLogEntry-Other-Flex,
+  .tss-1kuahcg-GameLogEntry-Self-Flex {
+    position: relative !important;
+  }
+
+  .tss-1yxh2yy-TimeAgo-TimeAgo {
+    position: absolute !important;
+    top: -3px !important;
+    right: 0px !important;
+  }
+
+  .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex {
+    background: var(--theme-color) !important;
+    border: 0px !important;
+    border-radius: 8px 2px 8px 8px !important;
+  }
+
+  .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex span,
+  .tss-8-Self-ref.tss-cmvb5s-Message-Self-Flex * .tss-1qy7qai-DieIcon {
+    color: white !important;
+  }
+
+  .tss-1dhkeq7-Divider {
+    display: none !important;
+  }
+
+  .tss-1x8v1yt-SetPreviewActionsContainer-Flex {
+    position: relative !important;
+    bottom: 3px !important;
+  }
+
+  .tss-1yxh2yy-TimeAgo-TimeAgo {
+    transform: scaleX(0.85) !important;
+    transform-origin: right !important;
+  }
+
+
+
+  /* --- BEYOND20 FIXES --- */
+
+  .beyond20-hotkeys-popup.beyond20-hotkeys-list {
+    background: hsla(213, 22%, 10%, 1) !important;
+    border-radius: 8px !important;
+    border-color: var(--theme-color) !important;
+  }
+
+  .ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20-hotkeys {
+    z-index: 4000 !important;
+    left: 463px !important;
+    top: -80px !important;
+  }
+
+  .ct-subsections {
+    z-index: 1000 !important;
+  }
+
+  .ct-character-header-desktop {
+    z-index: 2000 !important;
+  }
+
+  .beyond20-manage-hotkeys {
+    top: 74px !important;
+    right: 3px !important;
+  }
+
+  .beyond20-quick-roll-tooltip {
+    width: 40px !important;
+    height: 40px !important;
+    background: none !important;
+  }
+
+  img.beyond20-quick-roll-icon {
+    width: inherit !important;
+    margin: 0px !important;
+  }
+
+
+
+  /* --- ABOVEVTT FIXES --- */
+
+  #avtt-character-join-button {
+    font-size: 0px !important;
+    color: rgb(255 255 255 / 70%) !important;
+    display: grid !important;
+
+  }
+
+  #avtt-character-join-button:after {
+    content: "AboveVTT" !important;
+    font-size: 13px !important;
+  }
+
+  [Title="AboveVTT Logo"] {
+    display: none !important;
+  }
+
+  span#avtt-icon-roll-span {
+    width: fit-content !important;
+    font-weight: 500 !important;
+  }
+
+
+
+  /* --- QuickLinks --- */
+
+  #ddb-custom-links {
+    top: 90px !important;
+    width: 276px !important;
+    height: 140px !important;
+    padding: 15px !important;
+  }
+
+  .ddb-custom-link-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+    align-content: flex-start !important;
+  }
+
+  .ddb-custom-link-pill {
+    display: flex !important;
+    align-items: center !important;
+    height: 22px !important;
+    padding: 10px 13px !important;
+
+    background-color: var(--TrueSight_Secondary) !important;
+    color: #fff !important;
+
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+
+    border-radius: 100px !important;
+  }
+
+  .ddb-custom-link-pill:hover {
+    background-color: var(--TrueSight_Tertiary) !important;
+  }
+
+  .ddb-link-edit-btn {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    opacity: 0.5 !important;
+    cursor: pointer !important;
+    transition: color 0.2s !important;
+    z-index: 10 !important;
+  }
+
+  .ddb-link-edit-btn:hover {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+
+  .ddb-link-scroll-container {
+    width: 100% !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .ddb-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(4px) !important;
+    z-index: 10000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    animation: fadeIn 0.2s ease-out !important;
+  }
+
+  .ddb-modal-content {
+    background-color: var(--TrueSight_Primary) !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+    width: 550px !important;
+    max-width: 90vw !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .ddb-modal-header {
+    color: var(--theme-color) !important;
+    font-family: Roboto Condensed, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 1px solid var(--TrueSight_Secondary) !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .ddb-modal-desc {
+    color: #9facb2 !important;
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .ddb-modal-desc code {
+    background: rgb(30, 37, 42) !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    color: #ccc !important;
+  }
+
+  .ddb-modal-textarea {
+    width: 100% !important;
+    height: 300px !important;
+    background-color: #0b1013 !important;
+    color: #ececec !important;
+    border: 0 !important;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    resize: vertical !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    border-radius: 4px !important;
+  }
+
+  .ddb-modal-actions {
+    margin-top: 10px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+  }
+
+  .ddb-modal-btn {
+    padding: 8px 20px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+  }
+
+  .ddb-modal-btn.save,
+  .ddb-modal-btn.cancel {
+    background: var(--TrueSight_Secondary) !important;
+    color: #fff !important;
+    border: 0 !important;
+  }
+
+  .ddb-modal-btn.save:hover,
+  .ddb-modal-btn.cancel:hover {
+    background: var(--TrueSight_Tertiary) !important;
+  }
+
+  #ddb-links-editor-modal>div>textarea:focus {
+    background-color: #0b1013 !important;
+  }
+
+/* --- PARTY WIZARD --- */
+
+@keyframes rainbow-dance {
+  0%   { --TrueSight_Tertiary: hsl(0, 80%, 50%); }
+  20%  { --TrueSight_Tertiary: hsl(72, 80%, 50%); }
+  40%  { --TrueSight_Tertiary: hsl(144, 80%, 50%); }
+  60%  { --TrueSight_Tertiary: hsl(216, 80%, 50%); }
+  80%  { --TrueSight_Tertiary: hsl(288, 80%, 50%); }
+  100% { --TrueSight_Tertiary: hsl(360, 80%, 50%); }
+}
+
+@property --TrueSight_Tertiary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: hsl(210, 48%, 27%);
+}
+
+html.party-time-enabled {
+  animation: rainbow-dance 2s linear infinite !important;
+}
+
+}

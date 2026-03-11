@@ -2,7 +2,12 @@
     'use strict';
 
     const TARGET_SHEET = '.ct-character-sheet__inner';
-    const MY_SIDEBAR = '.site-bar';
+    
+    const SYNC_ELEMENTS = [
+        '[class*="wrappericpeg"]',
+        '[class*="menuContainer"]',
+        '[class*="searchContainer"]'
+    ];
 
     let currentSheetInner = null;
     let currentObserver = null;
@@ -15,21 +20,24 @@
         };
 
         const syncPosition = () => {
-            const mySidebar = document.querySelector(MY_SIDEBAR);
-            if (!mySidebar) return;
-
             const currentTransform = sheetInner.style.transform;
             const xValue = getTranslateX(currentTransform);
 
-            mySidebar.style.marginLeft = `${xValue}px`;
+            SYNC_ELEMENTS.forEach(selector => {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(el => {
+                    el.style.marginLeft = `${xValue}px`;
 
-            if (sheetInner.style.transition) {
-                mySidebar.style.transition = sheetInner.style.transition.replace('transform', 'margin-left');
+                    if (sheetInner.style.transition) {
+                        el.style.transition = sheetInner.style.transition.replace('transform', 'margin-left');
+                        if (!el.style.transition) {
+                            el.style.transition = 'margin-left 1s ease!important';
+                        }
+                    }
+                });
+            });
 
-                if (!mySidebar.style.transition) {
-                    mySidebar.style.transition = 'margin-left 0.3s ease';
-                }
-            }
+            document.body.style.setProperty('--tsui-nav-offset', `${xValue}px`);
         };
 
         syncPosition();
@@ -52,7 +60,6 @@
 
     setInterval(() => {
         const sheetInner = document.querySelector(TARGET_SHEET);
-        const mySidebar = document.querySelector(MY_SIDEBAR);
 
         if (!sheetInner) {
             currentSheetInner = null; 
@@ -62,10 +69,15 @@
                 currentObserver = null;
             }
 
-            if (mySidebar) {
-                mySidebar.style.marginLeft = '';
-                mySidebar.style.transition = '';
-            }
+            SYNC_ELEMENTS.forEach(selector => {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(el => {
+                    el.style.marginLeft = '';
+                    el.style.transition = '';
+                });
+            });
+            document.body.style.removeProperty('--tsui-nav-offset');
+
             return;
         }
 
@@ -77,6 +89,5 @@
             currentObserver = initSync(sheetInner);
         }
     }, 500);
-
 
 })();

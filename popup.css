@@ -203,3 +203,30 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+
+/* --- PARTY WIZARD --- */
+
+#options-panel {
+    position: relative;
+}
+
+#party-wizard {
+    position: absolute;
+    right: -8px;
+    bottom: -12px;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+#party-wizard:hover {
+    opacity: 0.8;
+}
+
+#party-wizard.active {
+    filter: grayscale(0%);
+    opacity: 1;
+}
