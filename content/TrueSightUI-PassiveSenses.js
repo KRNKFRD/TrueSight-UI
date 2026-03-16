@@ -14,16 +14,20 @@
     };
 
     function updatePassives() {
-
-        const sensesContainer = document.querySelector('.ct-senses');
+        const sensesContainer = document.querySelector('.ct-senses-box') || document.querySelector('.ct-senses');
         if (!sensesContainer) return;
 
         const passiveValues = {};
-        sensesContainer.querySelectorAll('.ct-senses__callout').forEach(el => {
-            const label = el.querySelector('.ct-senses__callout-label')?.innerText;
-            const value = el.querySelector('.ct-senses__callout-value')?.innerText;
-            if (label && value) {
-                passiveValues[label.trim()] = value.trim();
+
+
+        const labels = sensesContainer.querySelectorAll('[class*="calloutLabel"], [class*="CalloutLabel"]');
+        
+        labels.forEach(labelEl => {
+            const label = labelEl.textContent?.trim();
+            const valueEl = labelEl.parentElement.querySelector('[class*="calloutValue"], [class*="CalloutValue"]');
+            
+            if (label && valueEl) {
+                passiveValues[label] = valueEl.textContent?.trim();
             }
         });
 
@@ -33,7 +37,7 @@
             const nameEl = row.querySelector('.ct-skills__col--skill');
             if (!nameEl) return;
 
-            const skillName = nameEl.innerText.split('(')[0].trim();
+            const skillName = nameEl.textContent.split('(')[0].trim();
 
             const targetKey = MAPPING[skillName];
             if (!targetKey || !passiveValues[targetKey]) return;
@@ -45,14 +49,12 @@
             if (!mySpan) {
                 mySpan = document.createElement('span');
                 mySpan.className = 'userscript-passive-val';
-
                 Object.assign(mySpan.style, STYLE);
-
                 nameEl.appendChild(mySpan);
             }
 
-            if (mySpan.innerText !== newValue) {
-                mySpan.innerText = newValue;
+            if (mySpan.textContent !== newValue) {
+                mySpan.textContent = newValue;
             }
         });
     }
@@ -65,13 +67,11 @@
         const sheet = document.querySelector('.ct-character-sheet');
         if (sheet) {
             clearInterval(waitForSheet);
-
             observer.observe(sheet, {
                 childList: true,
                 subtree: true,
                 characterData: true
             });
-
             updatePassives();
         }
     }, 500);

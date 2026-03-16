@@ -645,6 +645,7 @@
   #character-tools-target>div>div.ct-character-sheet__inner>div>div.ct-character-header-desktop>div.styles_container__9OvpY>span {
     display: none !important;
   }
+
   .styles_characterName__2x8wQ {
     max-width: 310px !important;
   }
@@ -1253,7 +1254,6 @@
 
 
   /* --- SENSES TWEAKS --- */
-
   .ct-senses-desktop.ct-subsection.ct-subsection--senses {
     width: 276px !important;
     padding: 10px 20px !important;
@@ -1262,24 +1262,23 @@
     top: 240px !important;
   }
 
-  .ct-senses,
-  .ct-senses__callouts {
+  div[class*="styles_senses__"] {
     height: 0px !important;
     width: 276px !important;
   }
 
-  .ct-senses__callout-label,
-  .ddbc-box-background {
+
+  div[class*="styles_calloutLabel__"] {
     display: none !important;
   }
 
-  .ct-senses__callout-value {
+  div[class*="styles_calloutValue__"] {
     z-index: 50 !important;
     font-size: 14.5px !important;
     font-weight: 300 !important;
   }
 
-  .ct-senses__callout {
+  div[class*="styles_callout__"] {
     margin: 0px !important;
     width: 276px !important;
     display: none !important;
@@ -1295,13 +1294,11 @@
     width: 236px !important;
   }
 
-  .ct-senses__summary {
+  div[class*="styles_senses__"] > div[class*="styles_summary__"] {
     margin: 0px !important;
     width: 236px !important;
     height: 42px !important;
   }
-
-
 
   /* --- SIDEBAR TWEAKS --- */
 
@@ -1670,25 +1667,42 @@
     background-color: #0b1013 !important;
   }
 
-/* --- PARTY WIZARD --- */
+  /* --- PARTY WIZARD --- */
 
-@keyframes rainbow-dance {
-  0%   { --TrueSight_Tertiary: hsl(0, 80%, 50%); }
-  20%  { --TrueSight_Tertiary: hsl(72, 80%, 50%); }
-  40%  { --TrueSight_Tertiary: hsl(144, 80%, 50%); }
-  60%  { --TrueSight_Tertiary: hsl(216, 80%, 50%); }
-  80%  { --TrueSight_Tertiary: hsl(288, 80%, 50%); }
-  100% { --TrueSight_Tertiary: hsl(360, 80%, 50%); }
-}
+  @keyframes rainbow-dance {
+    0% {
+      --TrueSight_Tertiary: hsl(0, 80%, 50%);
+    }
 
-@property --TrueSight_Tertiary {
-  syntax: '<color>';
-  inherits: true;
-  initial-value: hsl(210, 48%, 27%);
-}
+    20% {
+      --TrueSight_Tertiary: hsl(72, 80%, 50%);
+    }
 
-html.party-time-enabled {
-  animation: rainbow-dance 2s linear infinite !important;
-}
+    40% {
+      --TrueSight_Tertiary: hsl(144, 80%, 50%);
+    }
+
+    60% {
+      --TrueSight_Tertiary: hsl(216, 80%, 50%);
+    }
+
+    80% {
+      --TrueSight_Tertiary: hsl(288, 80%, 50%);
+    }
+
+    100% {
+      --TrueSight_Tertiary: hsl(360, 80%, 50%);
+    }
+  }
+
+  @property --TrueSight_Tertiary {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: hsl(210, 48%, 27%);
+  }
+
+  html.party-time-enabled {
+    animation: rainbow-dance 2s linear infinite !important;
+  }
 
 }
