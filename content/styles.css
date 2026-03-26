@@ -35,7 +35,6 @@
 
 
   /* --- GENERAL TWEAKS --- */
-
   .ct-character-sheet:before {
     height: 0px !important;
   }
@@ -81,7 +80,6 @@
 
 
   /* --- PRIMARY BOX TWEAKS --- */
-
   .ct-inventory-item__meta-item,
   span.ct-spells-spell__meta-item,
   span.ddbc-combat-attack__meta-item,
@@ -187,7 +185,6 @@
 
 
   /* --- EXTRA INVENTORY TWEAKS --- */
-
   .ct-inventory-item__weight,
   .ct-inventory-item__quantity,
   .ct-inventory-item__cost,
@@ -285,7 +282,6 @@
 
 
   /* --- EXTRA SPELLS TWEAKS --- */
-
   .ct-spells-filter__box,
   .ct-spells-filter__advanced {
     display: none !important;
@@ -317,7 +313,14 @@
 
   /* --- NAVI TWEAKS --- */
 
-  ._wrapper_icpeg_1 {
+  div[class*="_promoBannerWrapper"] {
+    pointer-events: all !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+  }
+
+  ._wrapper_15bs6_1 {
     background: none !important;
     border: none !important;
     top: 12px !important;
@@ -334,7 +337,7 @@
     background: var(--TrueSight_Primary) !important;
   }
 
-  ._panelColumns_icpeg_145 {
+  ._panelColumns_15bs6_145 {
     grid-template-columns: repeat(5, minmax(200px, 220px)) !important;
   }
 
@@ -342,15 +345,15 @@
     display: none !important;
   }
 
-  svg._chevronIcon_icpeg_134 {
+  svg._chevronIcon_15bs6_134 {
     display: none !important;
   }
 
-  ._linkHighlight_icpeg_51 {
+  ._linkHighlight_15bs6_51 {
     background-image: none !important;
   }
 
-  ._linkHighlight_icpeg_51:after {
+  ._linkHighlight_15bs6_51:after {
     background-image: none !important;
   }
 
@@ -371,7 +374,7 @@
     width: 50px !important;
   }
 
-  ._linkHighlight_icpeg_51._menuLink_icpeg_33 {
+  ._linkHighlight_15bs6_51._menuLink_15bs6_33 {
     padding: 6px 18px 5px 18px !important;
     border-radius: 50px !important;
     font-weight: 600 !important;
@@ -382,16 +385,20 @@
     margin-right: 10px !important;
   }
 
-  ._menuLink_icpeg_33 {
+  ._menuLink_15bs6_33 {
     line-height: 19px !important;
   }
 
-  ._linkHighlight_icpeg_51._menuLink_icpeg_33:hover {
+  ._linkHighlight_15bs6_51._menuLink_15bs6_33:hover {
     border: 1px solid var(--TrueSight_Tertiary) !important;
   }
 
-  ._linkHighlight_icpeg_51._menuLink_icpeg_33:focus {
+  ._linkHighlight_15bs6_51._menuLink_15bs6_33:focus {
     background: var(--TrueSight_Secondary) !important;
+  }
+
+  svg._chevronIcon_15bs6_130 {
+    display: none !important;
   }
 
   [data-item_name="Community"],
@@ -416,7 +423,7 @@
     font-size: 13px !important;
   }
 
-  ._panel_icpeg_92 {
+  ._panel_15bs6_92 {
     position: absolute !important;
     top: 70px !important;
   }
@@ -495,20 +502,19 @@
 
 
   /* --- ADDITIONAL NAVI TWEAKS (order as in code) --- */
-
   ._NavigationMenuContainer_1djtw_1 {
     justify-content: center !important;
     display: grid !important;
     grid-template-rows: 1fr 0 !important;
   }
 
-  ._wrapper_icpeg_1 {
+  ._wrapper_15bs6_1 {
     width: 1200px !important;
     display: grid !important;
     justify-content: start !important;
   }
 
-  ._menuContainer_icpeg_8 {
+  ._menuContainer_15bs6_8 {
     border-radius: 8px !important;
     padding: 7px 8px !important;
     margin-bottom: 12px !important;
@@ -517,18 +523,19 @@
     flex-direction: row-reverse !important;
   }
 
-  ._menuNavList_icpeg_385 {
+  ._menuNavList_15bs6_385 {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr !important;
     align-content: center !important;
     width: min-content !important;
   }
 
-  ._menuNav_icpeg_29 {
+  ._menuNav_15bs6_29 {
     justify-content: flex-end !important;
+    align-items: center !important;
   }
 
-  ._menuIcons_icpeg_220 {
+  ._menuIcons_15bs6_216 {
     flex-direction: row-reverse !important;
   }
 
@@ -560,16 +567,15 @@
 
 
   /* --- NAVI POINTER EVENTS FIX --- */
-
   .header-wrapper.header-wrapper--characters,
   [name="megamenu"],
   div#mega-menu-target,
   header._NavigationMenuContainer_1djtw_1,
-  ._wrapper_icpeg_1 {
+  ._wrapper_15bs6_1 {
     pointer-events: none !important;
   }
 
-  ._menuContainer_icpeg_8,
+  ._menuContainer_15bs6_8,
   ._searchContainer_e9ekp_1 {
     pointer-events: auto !important;
   }
@@ -577,7 +583,6 @@
 
 
   /* --- ALLWAYS SHOW SEARCHBAR --- */
-
   #site-main.site-navigation-menu #mega-menu-target {
     height: 75px !important;
   }
@@ -635,7 +640,6 @@
 
 
   /* --- HEADING TWEAKS --- */
-
   .ddbc-character-tidbits__menu-callout,
   .ct-character-header-desktop__group--share,
   .ct-beyond20-settings,
@@ -683,7 +687,6 @@
 
 
   /* --- ADDITIONAL HEADING TWEAKS*/
-
   .ct-quick-info {
     z-index: 200 !important;
   }
@@ -914,7 +917,6 @@
 
 
   /* --- HEALTH TWEAKS*/
-
   .ct-quick-info__health {
     z-index: 200 !important;
     position: absolute !important;
@@ -944,7 +946,6 @@
 
 
   /* --- ABILITIES TWEAKS --- */
-
   .ct-character-header-desktop {
     z-index: 0 !important;
   }
@@ -1014,7 +1015,6 @@
 
 
   /* --- SAVING THROW TWEAKS --- */
-
   .ct-subsection--abilities {
     width: 276px !important;
   }
@@ -1090,7 +1090,6 @@
 
 
   /* --- SKILLS TWEAKS --- */
-
   .ct-skills__header,
   .ct-skills__additional.ct-skills__additional--empty.ct-skills__additional--dark-mode {
     display: none !important;
@@ -1150,7 +1149,6 @@
 
 
   /* --- PROFICIENCIES TWEAKS --- */
-
   .ct-character-sheet-desktop .ct-subsection--proficiency-groups {
     top: unset !important;
     bottom: 0px !important;
@@ -1204,7 +1202,6 @@
 
 
   /* --- COMBAT TWEAKS --- */
-
   .ct-character-sheet-desktop .ct-subsection--combat {
     position: absolute !important;
     top: -191px !important;
@@ -1294,14 +1291,13 @@
     width: 236px !important;
   }
 
-  div[class*="styles_senses__"] > div[class*="styles_summary__"] {
+  div[class*="styles_senses__"]>div[class*="styles_summary__"] {
     margin: 0px !important;
     width: 236px !important;
     height: 42px !important;
   }
 
   /* --- SIDEBAR TWEAKS --- */
-
   .ct-sidebar.styles_sidebar__RrEHr {
     top: 58px !important;
     height: 1005px !important;
@@ -1352,7 +1348,6 @@
 
 
   /* --- EXTRA GAMELOG TWEAKS --- */
-
   .tss-8e3fk7-Container-Flex,
   .tss-jmihpx-GameLogEntries {
     padding: 0px !important;
@@ -1448,7 +1443,6 @@
 
 
   /* --- BEYOND20 FIXES --- */
-
   .beyond20-hotkeys-popup.beyond20-hotkeys-list {
     background: hsla(213, 22%, 10%, 1) !important;
     border-radius: 8px !important;
@@ -1488,12 +1482,10 @@
 
 
   /* --- ABOVEVTT FIXES --- */
-
   #avtt-character-join-button {
     font-size: 0px !important;
     color: rgb(255 255 255 / 70%) !important;
     display: grid !important;
-
   }
 
   #avtt-character-join-button:after {
@@ -1513,7 +1505,6 @@
 
 
   /* --- QuickLinks --- */
-
   #ddb-custom-links {
     top: 90px !important;
     width: 276px !important;
@@ -1668,7 +1659,6 @@
   }
 
   /* --- PARTY WIZARD --- */
-
   @keyframes rainbow-dance {
     0% {
       --TrueSight_Tertiary: hsl(0, 80%, 50%);
