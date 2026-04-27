@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+@media screen and (min-width: 1240px) {
+
+		/* --- NAVI GENERAL TWEAKS --- */
+		div[class*="_promoBannerWrapper"] {
+			pointer-events: all !important;
+			position: absolute !important;
+			z-index: 1000 !important;
+			width: 100% !important;
+		}
+
+		div[data-testid="navigation-wrapper"] {
+			background: none !important;
+			border: none !important;
+			top: 12px !important;
+		}
+
+		button[data-testid="navigation-button"] {
+			overflow: hidden !important;
+			top: 0px !important;
+			/*			z-index: -1 !important;  */
+			background: var(--TrueSight_Primary) !important;
+			padding: 6px 18px 5px 18px !important;
+			border-radius: 50px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.25px !important;
+			border: 1px solid var(--TrueSight_Secondary) !important;
+			height: 31.2px !important;
+			align-items: center !important;
+			margin-right: 10px !important;
+			line-height: 19px !important;
+		}
+
+		button[data-testid="navigation-button"]:hover {
+			border: 1px solid var(--TrueSight_Tertiary) !important;
+		}
+
+		button[data-testid="navigation-button"]:focus {
+			background: var(--TrueSight_Secondary) !important;
+		}
+		
+				div[data-testid="navigation-dropdown"] {
+			position: absolute !important;
+			top: 70px !important;
+			border-radius: 8px !important;
+		}
+
+		div[data-testid="navigation-dropdown"] > div {
+			grid-template-columns: repeat(5, minmax(200px, 220px)) !important;
+			padding: 20px!important;
+		}
+
+		[data-testid="logo-link"] {
+			display: none !important;
+		}
+		svg[class*="_chevronIcon"] {
+			display: none !important;
+		}
+
+		[data-item_name="Community"],
+		[data-item_name="Subscribe"],
+		[data-item_name="Marketplace"],
+		[data-item_name="Search"] {
+			display: none !important;
+		}
+
+
+		[data-item_name="Play D&D"] {
+			font-size: 0px !important;
+			display: grid !important;
+		}
+
+		[data-item_name="Play D&D"]:before {
+			content: "My D&D" !important;
+			font-size: 13px !important;
+		}
+
+		[data-item_name="Rules"],
+		[data-item_name="Library"] {
+			font-size: 13px !important;
+		}
+
+		[id="mega-menu-target"] {
+			height: 75px !important;
+		}
+
+
+		[class*='_linkHighlight']:after {
+			background-image: none !important;
+		}
+
+
+
+
+
+
+
+		/* --- ADDITIONAL NAVI TWEAKS (order as in code) --- */
+		[data-element_name="Element: NavigationMenuContainer"] {
+			justify-content: center !important;
+			display: grid !important;
+			grid-template-rows: 1fr 0 !important;
+		}
+
+		[data-testid="navigation-wrapper"] {
+			width: 1200px !important;
+			display: grid !important;
+			justify-content: start !important;
+		}
+
+		[class*="_menuContainer"] {
+			border-radius: 8px !important;
+			padding: 7px 8px !important;
+			margin-bottom: 12px !important;
+			width: 560px !important;
+			max-width: none !important;
+			flex-direction: row-reverse !important;
+		}
+
+		[data-testid="navigation-nav"] {
+			justify-content: flex-end !important;
+			align-items: center !important;
+		}
+
+		[class*="_menuNavList"] {
+			display: grid !important;
+			grid-template-columns: 1fr 1fr 1fr !important;
+			align-content: center !important;
+			width: min-content!important;
+		}
+
+		[class*="_menuIcons"] {
+			flex-direction: row-reverse !important;
+		}
+
+		[data-testid="userMenu"] {
+			left: -8px !important;
+			right: auto !important;
+			top: 65px !important;
+		}
+
+		[data-sub_element_name="User Dropdown"] {
+			border-radius: 8px !important;
+		}
+
+
+
+
+
+		/* --- NAVI USER MENU --- */
+		[data-testid="signedInUserButton"] {
+			background: none !important;
+			padding: 0 !important;
+		}
+
+		[data-testid="signedInUserButton"] > span,
+		[data-testid="signedInUserButton"] > svg {
+			display: none !important;
+		}
+
+		[alt="User avatar"] {
+			margin: 0 !important;
+			border-radius: 4px !important;
+			height: 50px !important;
+			width: 50px !important;
+		}
+
+
+
+		/* --- NAVI BUTTONS --- */
+		.ct-character-header-desktop__button,
+		.ct-character-header-desktop__button,
+		[data-testid="campaign-summary"],
+		div[class*="styles_campaignButtonGroup"] {
+			padding: 6px 18px 5px 18px !important;
+			margin: 0 !important;
+			margin-right: 11px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.25px !important;
+			border-radius: 8px !important;
+			background: var(--TrueSight_Secondary) !important;
+			border: 1px solid var(--TrueSight_Secondary) !important;
+			width: auto !important;
+		}
+
+		div[class*="styles_campaignButtonGroup"]:hover,
+		[data-testid="campaign-summary"]:hover,
+		.ct-character-header-desktop__button:hover {
+			border: 1px solid var(--TrueSight_Tertiary) !important;
+			background: var(--TrueSight_Tertiary) !important;
+			transform: Scale(1.025) !important;
+		}
+
+		svg[class*="styles_campaignButtonIcon"] {
+			display: none !important;
+		}
+
+
+		span[class*="styles_summaryLabel"] {
+			font-size: 0 !important;
+			display: contents !important;
+		}
+
+		span[class*="styles_summaryLabel"]:after {
+			font-size: 13px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.25px !important;
+			content: "Campaign" !important;
+			visibility: visible !important;
+			position: relative !important;
+			top: 0.5px !important;
+		}
+
+		[class*="styles_campaignButton_"]:after {
+			font-size: 13px !important;
+			font-weight: 600 !important;
+			letter-spacing: 0.25px !important;
+			content: "Game Log" !important;
+			position: relative !important;
+			top: 0.5px !important;
+		}
+
+		[data-testid="campaign-summary"] {
+			display: grid !important;
+			grid-template-rows: 0 1fr !important;
+		}
+
+		.ct-character-header-desktop {
+			padding: 10px 5px 40px !important;
+			font-size: 13px !important;
+			color: #c4cbce !important;
+		}
+
+		.ct-character-header-desktop__group.ct-character-header-desktop__group--short-rest,
+		.ct-character-header-desktop__group.ct-character-header-desktop__group--long-rest,
+		div:has(>[data-testid="campaign-summary"]),
+		.ct-character-header-desktop__group.ct-character-header-desktop__group--beyond20,
+		#avtt-character-join-button {
+			position: relative !important;
+			right: -555px !important;
+			top: -86px !important;
+		}
+
+		div:has(>[data-testid="campaign-summary"]) {
+			width: auto !important;
+		}
+
+		.ct-character-header-desktop__button-label {
+			margin: 0 !important;
+			position: relative !important;
+			top: 0.5px !important;
+		}
+
+
+
+		/* --- ALLWAYS SHOW SEARCHBAR --- */
+		[data-sub_element_name="Search"] {
+			display: block !important;
+			position: relative !important;
+			top: -55.5px !important;
+			left: 55px !important;
+			width: 199px !important;
+			background: none !important;
+		}
+
+		[data-testid="navigation-search-form"] {
+			background: none !important;
+			border: 1px solid var(--TrueSight_Secondary) !important;
+			padding: 0 15px 0 15px !important;
+			border-radius: 50px !important;
+			height: 31.2px !important;
+		}
+
+		[data-testid="navigation-search-form"]:hover,
+		[data-testid="navigation-search-form"]:focus {
+			border: 1px solid var(--TrueSight_Tertiary) !important;
+		}
+
+		svg[data-testid="search-input-search-icon"] {
+			display: none !important;
+		}
+
+		[data-testid="navigation-search-input"] {
+			padding-left: 0px !important;
+			font-size: 14px !important;
+			font-weight: 300 !important;
+		}
+
+		[data-testid="navigation-search-input"]::placeholder {
+			opacity: 0.5 !important;
+			padding-left: 0px !important;
+			font-size: 14px !important;
+			font-weight: 300 !important;
+		}
+
+		svg[data-testid="search-input-close-icon"] {
+			top: 3px !important;
+			padding: 0 4px !important;
+			height: 24px !important;
+		}
+
+		[class*="suggestionsListWrapper"] {
+			border-radius: 8px !important;
+			top: 65px !important;
+		}
+
+
+
+
+		/* --- NAVI BACKGROUND --- */
+		body::before {
+			content: "" !important;
+			position: absolute !important;
+			top: 12px !important;
+			width: 1200px !important;
+			left: calc((100% - 1200px) / 2) !important;
+			right: calc(100% - 600px) !important;
+			height: 64px !important;
+			border-radius: 8px !important;
+			background: var(--TrueSight_Primary) !important;
+			box-shadow: 0px 0px 1000px 200px #00000070 !important;
+			margin-left: var(--tsui-nav-offset, 0px) !important;
+			transition: margin-left 0.1s ease !important;
+		}
+
+
+
+		/* --- NAVI POINTER EVENTS FIX --- */
+		.header-wrapper.header-wrapper--characters,
+		[name="megamenu"],
+		div#mega-menu-target,
+		header[data-element_type*='Navigation Menu'],
+		div[data-testid='navigation-wrapper'] {
+			pointer-events: none !important;
+		}
+
+		div[class*='_menuContainer'],
+		div[class*='_searchContainer'] {
+			pointer-events: auto !important;
+		}
+	}

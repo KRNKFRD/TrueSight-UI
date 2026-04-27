@@ -37,6 +37,7 @@
     }
 
     const mainStyle = injectCSS('truesight-styles', 'styles.css');
+    const naviStyle = injectCSS('truesight-navi', 'tsui-navi.css');
     const cursorStyle = injectCSS('TrueSightUI-cursor', 'tsui-cursor.css');
     const filterStyle = injectCSS('TrueSightUI-filters', 'tsui-filters.css');
     const concentrationStyle = injectCSS('TrueSightUI-concentration', 'tsui-concentration.css');
@@ -47,6 +48,7 @@
         const shouldBeActive = isSheet && !isAboveVTT;
 
         mainStyle.disabled = !shouldBeActive;
+        naviStyle.disabled = !shouldBeActive;
         cursorStyle.disabled = !(isSheet && settings.opt_cursor);
         filterStyle.disabled = !(isSheet && settings.opt_filters);
         concentrationStyle.disabled = !(isSheet && settings.opt_concentration);
